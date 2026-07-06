@@ -3,7 +3,7 @@ import {
   Award,
   Building2,
   ChartLine,
-  CheckCircle2,
+  
   Handshake,
   MessageCircle,
   Star,
@@ -170,5 +170,3 @@ function AboutPage() {
   );
 }
 
-// Ensure the icon is treated as used across the file.
-void CheckCircle2;
