@@ -11,16 +11,72 @@ import {
   Globe2,
   Handshake,
   Home,
+  MapPin,
   MessageCircle,
   PiggyBank,
   Plane,
   ReceiptText,
+  Rocket,
   ScrollText,
   ShieldCheck,
   TrendingUp,
   Users,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WHATSAPP_URL } from "../components/site-chrome";
+
+const LANDING_PAGES: {
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+  to: "/cpa-herzliya" | "/cpa-startups" | "/cpa-freelancers" | "/cpa-international" | "/cpa-foreign-companies";
+}[] = [
+  { icon: MapPin, title: "רואה חשבון בהרצליה", desc: "משרד מקומי בהרצליה פיתוח – ליווי אישי לחברות ועצמאים באזור השרון.", to: "/cpa-herzliya" },
+  { icon: Rocket, title: "רואה חשבון לסטארטאפים", desc: "מהקמה ועד Exit – גיוסי הון, אופציות 102 ופעילות בינלאומית.", to: "/cpa-startups" },
+  { icon: Briefcase, title: "עצמאים ופרילנסרים", desc: "פתיחת תיק, ניהול שוטף, דוחות שנתיים ותכנון מס אישי.", to: "/cpa-freelancers" },
+  { icon: Plane, title: "רילוקיישן וייעוץ בינלאומי", desc: "עולים, תושבים חוזרים, ניתוק תושבות ומיסוי בין-מדינתי.", to: "/cpa-international" },
+  { icon: Globe2, title: "חברות זרות בישראל", desc: "הקמת חברה בת או סניף, בנקים, שכר ו-Transfer Pricing.", to: "/cpa-foreign-companies" },
+];
+
+function FeaturedLandingPages() {
+  return (
+    <section className="border-b border-border/60 bg-background py-16">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="text-xs font-semibold uppercase tracking-widest text-gold">
+            מוקדי התמחות
+          </div>
+          <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl">
+            דפי שירות ייעודיים
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            הרחבה מלאה על השירותים המובילים שלנו, כולל שאלות ותשובות ופרטים מעשיים.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {LANDING_PAGES.map(({ icon: I, title, desc, to }) => (
+            <Link
+              key={to}
+              to={to}
+              className="group flex flex-col rounded-xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-gold/60 hover:shadow-md"
+            >
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                <I className="h-5 w-5" aria-hidden />
+              </div>
+              <h3 className="font-display text-lg font-semibold text-primary">{title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              <span className="mt-4 text-sm font-semibold text-gold group-hover:underline">
+                לפרטים ←
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 export const Route = createFileRoute("/services")({
   head: () => ({
