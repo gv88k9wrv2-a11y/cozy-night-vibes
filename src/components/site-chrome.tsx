@@ -17,7 +17,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-medium text-foreground/80 md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-foreground/80 md:flex">
           <Link to="/" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
             בית
           </Link>
@@ -26,6 +26,15 @@ export function SiteHeader() {
           </Link>
           <Link to="/about" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
             אודות
+          </Link>
+          <Link to="/team" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
+            הצוות
+          </Link>
+          <Link to="/blog" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
+            בלוג
+          </Link>
+          <Link to="/faq" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
+            שאלות ותשובות
           </Link>
           <Link to="/contact" className="hover:text-primary" activeProps={{ className: "text-primary" }}>
             צור קשר
@@ -74,7 +83,11 @@ export function SiteFooter() {
             <li><Link to="/" className="hover:text-gold">דף הבית</Link></li>
             <li><Link to="/services" className="hover:text-gold">שירותים</Link></li>
             <li><Link to="/about" className="hover:text-gold">אודות</Link></li>
+            <li><Link to="/team" className="hover:text-gold">הצוות</Link></li>
+            <li><Link to="/blog" className="hover:text-gold">בלוג</Link></li>
+            <li><Link to="/faq" className="hover:text-gold">שאלות ותשובות</Link></li>
             <li><Link to="/contact" className="hover:text-gold">צור קשר</Link></li>
+            <li><Link to="/accessibility" className="hover:text-gold">הצהרת נגישות</Link></li>
           </ul>
         </div>
         <div>
