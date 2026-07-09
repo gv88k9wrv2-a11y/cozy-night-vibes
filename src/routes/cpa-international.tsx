@@ -126,6 +126,7 @@ export const Route = createFileRoute("/cpa-international")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="לפני מעבר לחו״ל או חזרה לישראל – חובה להתייעץ."
     />
   ),
