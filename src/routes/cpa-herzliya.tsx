@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "עיריית הרצליה – רישוי עסקים וארנונה",
+    url: "https://www.herzliya.muni.il",
+    source: "עיריית הרצליה (herzliya.muni.il)",
+    description: "רישיונות עסק, ארנונה עסקית והיטלים מוניציפליים בהרצליה.",
+  },
+  {
+    label: "רשות המסים – שלוחות ומשרדי שומה",
+    url: "https://www.gov.il/he/departments/israel_tax_authority",
+    source: "רשות המסים (gov.il)",
+    description: "פקיד שומה כפר סבא/נתניה – המשרד המטפל בעסקים באזור השרון.",
+  },
+  {
+    label: "רשם החברות – רישום ואגרות",
+    url: "https://www.gov.il/he/departments/israeli_corporations_authority",
+    source: "רשות התאגידים – משרד המשפטים (gov.il)",
+    description: "פתיחת חברה בע״מ, אגרה שנתית וחובות דיווח.",
+  },
+  {
+    label: "המוסד לביטוח לאומי – סניף הרצליה",
+    url: "https://www.btl.gov.il/About/BranchesLocations/Pages/default.aspx",
+    source: "ביטוח לאומי (btl.gov.il)",
+    description: "פתיחת תיק, דיווחי עצמאים ומעסיקים באזור.",
+  },
+  {
+    label: "PwC Israel – משרד הרצליה פיתוח",
+    url: "https://www.pwc.com/il/en/about-us/office-locations.html",
+    source: "PwC Israel",
+    description: "האקוסיסטם המקצועי של Big Four בהרצליה פיתוח.",
+  },
+  {
+    label: "לשכת רואי החשבון בישראל",
+    url: "https://www.icpas.org.il",
+    source: "לשכת רואי חשבון בישראל",
+    description: "רישום מקצועי, כללי אתיקה ותקינת ביקורת.",
+  },
+];
+
 
 const FAQS = [
   {
