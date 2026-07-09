@@ -106,6 +106,7 @@ export const Route = createFileRoute("/tax-consulting")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="מתלבטים לגבי צעד עסקי מסוים? נשמח לעזור לחשוב אתכם."
     />
   ),
