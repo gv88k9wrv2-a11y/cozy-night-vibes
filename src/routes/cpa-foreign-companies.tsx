@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe2 } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "רשם החברות – רישום חברה זרה וסניף",
+    url: "https://www.gov.il/he/departments/israeli_corporations_authority",
+    source: "רשות התאגידים – משרד המשפטים (gov.il)",
+    description: "רישום חברה בע״מ, סניף של חברת חוץ ואגרות שנתיות.",
+  },
+  {
+    label: "רשות ההשקעות – חוק עידוד השקעות הון",
+    url: "https://www.gov.il/he/departments/authority_for_investments_and_development_of_the_industry_and_economy",
+    source: "משרד הכלכלה – רשות ההשקעות (gov.il)",
+    description: "מסלולי הטבות מס ומענקים למשקיעים זרים בישראל.",
+  },
+  {
+    label: "Transfer Pricing – סעיף 85א לפקודה",
+    url: "https://www.gov.il/he/departments/general/transfer_pricing",
+    source: "רשות המסים (gov.il)",
+    description: "חובת דיווח על עסקאות בין-חברתיות ומחקרי TP.",
+  },
+  {
+    label: "בנק ישראל – פיקוח על הבנקים ו-KYC",
+    url: "https://www.boi.org.il/he/BankingSupervision",
+    source: "בנק ישראל (boi.org.il)",
+    description: "רגולציית איסור הלבנת הון, פתיחת חשבונות לתאגידים זרים.",
+  },
+  {
+    label: "PwC Israel – Doing Business in Israel",
+    url: "https://www.pwc.com/il/en/publications/doing-business-in-israel.html",
+    source: "PwC Israel",
+    description: "מדריך רשמי של PwC למשקיעים זרים ולחברות בין-לאומיות.",
+  },
+  {
+    label: "KPMG – Investment in Israel Guide",
+    url: "https://kpmg.com/il/en/home/insights/2023/investment-in-israel.html",
+    source: "KPMG Israel",
+    description: "מבנה משפטי, מיסוי חברות ותמריצים לחברות זרות.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -86,6 +126,7 @@ export const Route = createFileRoute("/cpa-foreign-companies")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="שוקלים כניסה לשוק הישראלי? נשמח לתאם שיחת ייעוץ ראשונית."
     />
   ),

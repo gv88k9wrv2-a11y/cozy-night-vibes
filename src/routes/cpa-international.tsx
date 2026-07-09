@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Plane } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "אמנות המס של מדינת ישראל",
+    url: "https://www.gov.il/he/departments/general/tax_treaties_israel",
+    source: "רשות המסים (gov.il)",
+    description: "רשימת אמנות המס הבילטרליות של ישראל ונוסחיהן המלאים.",
+  },
+  {
+    label: "עולה חדש ותושב חוזר ותיק – הטבות מס",
+    url: "https://www.gov.il/he/departments/topics/new_immigrant_returning_resident",
+    source: "רשות המסים (gov.il)",
+    description: "פטור 10 שנים על הכנסות חו״ל, שנת הסתגלות ופטור מדיווח.",
+  },
+  {
+    label: "משרד העלייה והקליטה",
+    url: "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration",
+    source: "משרד העלייה והקליטה (gov.il)",
+    description: "זכויות עולים חדשים, תושבים חוזרים ושירותי הקליטה.",
+  },
+  {
+    label: "מבחני תושבות – סעיף 1 לפקודה",
+    url: "https://www.gov.il/he/departments/general/residency_test",
+    source: "רשות המסים (gov.il)",
+    description: "מבחן ׳מרכז החיים׳ ומבחן ימי השהייה לצרכי תושבות מס.",
+  },
+  {
+    label: "PwC Israel – Global Mobility Services",
+    url: "https://www.pwc.com/il/en/services/tax/global-mobility.html",
+    source: "PwC Israel",
+    description: "ליווי רילוקיישן, ניתוק תושבות ומיסוי בין-לאומי.",
+  },
+  {
+    label: "Deloitte – Taxation and Investment in Israel",
+    url: "https://www2.deloitte.com/il/en/pages/tax/articles/taxation-and-investment-in-israel.html",
+    source: "Deloitte Israel",
+    description: "מדריך מס למשקיעים זרים ולתושבים חוזרים.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -86,6 +126,7 @@ export const Route = createFileRoute("/cpa-international")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="לפני מעבר לחו״ל או חזרה לישראל – חובה להתייעץ."
     />
   ),

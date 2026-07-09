@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FileSpreadsheet } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "רשות המסים – פקודת מס הכנסה",
+    url: "https://www.gov.il/he/departments/israel_tax_authority",
+    source: "רשות המסים (gov.il)",
+    description: "עיקרי הפקודה, מדרגות מס ליחיד, מס חברות ומיסוי בעל שליטה.",
+  },
+  {
+    label: "החלטות מיסוי (Pre-Ruling)",
+    url: "https://www.gov.il/he/departments/dynamiccollectors/itataxdecisions",
+    source: "רשות המסים (gov.il)",
+    description: "מאגר החלטות המיסוי הרשמיות של רשות המסים.",
+  },
+  {
+    label: "משרד האוצר – מדיניות מס",
+    url: "https://www.gov.il/he/departments/ministry_of_finance",
+    source: "משרד האוצר (gov.il)",
+    description: "רפורמות מס, חקיקה חדשה ודברי הסבר להצעות חוק.",
+  },
+  {
+    label: "מרכז מידע פסיקה – בית המשפט העליון",
+    url: "https://supreme.court.gov.il",
+    source: "הרשות השופטת (court.gov.il)",
+    description: "פסיקה עדכנית בתחום מיסוי חברות ויחידים.",
+  },
+  {
+    label: "PwC Israel Tax Services",
+    url: "https://www.pwc.com/il/en/services/tax.html",
+    source: "PwC Israel",
+    description: "ניתוחי מס לחברות, בעלי שליטה ועסקאות מורכבות.",
+  },
+  {
+    label: "EY Israel – Worldwide Tax Guides",
+    url: "https://www.ey.com/en_il/tax-guides",
+    source: "EY Israel",
+    description: "מדריכי מס גלובליים כולל פרק ישראל.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -66,6 +106,7 @@ export const Route = createFileRoute("/tax-consulting")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="מתלבטים לגבי צעד עסקי מסוים? נשמח לעזור לחשוב אתכם."
     />
   ),

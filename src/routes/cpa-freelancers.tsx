@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Briefcase } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "רשות המסים – פתיחת תיק עוסק",
+    url: "https://www.gov.il/he/service/opening_file_at_the_tax_authority",
+    source: "רשות המסים (gov.il)",
+    description: "רישום עוסק פטור/מורשה במע״מ, מס הכנסה וניכויים.",
+  },
+  {
+    label: "מע״מ – עוסק פטור מול עוסק מורשה",
+    url: "https://www.gov.il/he/departments/topics/vat",
+    source: "רשות המסים (gov.il)",
+    description: "תקרת עוסק פטור השנתית ושיעור המע״מ העדכני.",
+  },
+  {
+    label: "ביטוח לאומי – עצמאים",
+    url: "https://www.btl.gov.il/insurance/Self_Employed/Pages/default.aspx",
+    source: "המוסד לביטוח לאומי (btl.gov.il)",
+    description: "שיעורי דמי ביטוח לעצמאי, מקדמות ודמי לידה/פגיעה בעבודה.",
+  },
+  {
+    label: "קרן פנסיה והשתלמות לעצמאי",
+    url: "https://www.gov.il/he/departments/topics/pension_savings_for_the_self_employed",
+    source: "רשות שוק ההון – משרד האוצר (gov.il)",
+    description: "חובת הפקדה לפנסיה, הטבות מס והכרה בהוצאה.",
+  },
+  {
+    label: "המשרד לשוויון חברתי – עסקים קטנים",
+    url: "https://www.gov.il/he/departments/small_and_medium_business_agency",
+    source: "הסוכנות לעסקים קטנים ובינוניים (gov.il)",
+    description: "מסלולי סיוע, הלוואות בערבות מדינה וייעוץ לפרילנסרים.",
+  },
+  {
+    label: "EY Israel – Tax Guide for Individuals",
+    url: "https://www.ey.com/en_il/services/tax/personal-tax",
+    source: "EY Israel",
+    description: "מדריך מס אישי, הטבות והוצאות מוכרות לעצמאי.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -84,6 +124,7 @@ export const Route = createFileRoute("/cpa-freelancers")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
       ctaHeadline="מוכן לקבל שקט נפשי? קבע פגישת ייעוץ ראשונית."
     />
   ),

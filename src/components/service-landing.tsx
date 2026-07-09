@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
+import { BookOpen, CheckCircle2, ExternalLink, MessageCircle, Phone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
   FloatingWhatsApp,
@@ -10,6 +10,13 @@ import {
 
 export type ServiceFAQ = { q: string; a: string };
 
+export type ServiceResource = {
+  label: string;
+  url: string;
+  source: string;
+  description?: string;
+};
+
 export type ServiceLandingProps = {
   eyebrow: string;
   title: string;
@@ -19,6 +26,7 @@ export type ServiceLandingProps = {
   faqs: ServiceFAQ[];
   ctaHeadline?: string;
   icon: LucideIcon;
+  resources?: ServiceResource[];
 };
 
 export function ServiceLanding({
@@ -30,6 +38,7 @@ export function ServiceLanding({
   faqs,
   ctaHeadline = "מוכנים להתקדם? נשמח לפגישת ייעוץ ראשונית ללא התחייבות.",
   icon: Icon,
+  resources,
 }: ServiceLandingProps) {
   return (
     <div className="min-h-screen bg-background">
@@ -113,8 +122,51 @@ export function ServiceLanding({
         </div>
       </section>
 
+      {/* Authoritative resources */}
+      {resources && resources.length > 0 && (
+        <section className="border-t border-border/60 bg-background py-14">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <div className="flex items-center gap-2">
+              <BookOpen className="h-5 w-5 text-gold" aria-hidden />
+              <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl">
+                מקורות רשמיים ומאמרים מקצועיים
+              </h2>
+            </div>
+            <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+              כל התוכן בעמוד זה מבוסס על החקיקה הישראלית ופרסומים רשמיים של רשויות
+              המדינה ומשרדי ה-Big Four. הקישורים למטה מפנים למקור הרשמי לצורך העמקה
+              ואימות.
+            </p>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              {resources.map((r) => (
+                <li key={r.url}>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-full flex-col gap-1 rounded-lg border border-border bg-card p-4 transition hover:border-gold hover:shadow-md"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-semibold text-primary group-hover:text-gold">
+                        {r.label}
+                      </span>
+                      <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
+                    </div>
+                    <span className="text-xs font-medium text-gold">{r.source}</span>
+                    {r.description && (
+                      <span className="text-sm text-muted-foreground">{r.description}</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
       <section className="border-y border-border/60 bg-secondary/40 py-16">
+
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="text-center font-display text-3xl font-bold text-primary">
             שאלות ותשובות

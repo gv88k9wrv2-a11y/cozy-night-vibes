@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FileSearch } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "רשות ניירות ערך – דיווחי חברות ציבוריות",
+    url: "https://www.isa.gov.il",
+    source: "רשות ניירות ערך (isa.gov.il)",
+    description: "דרישות הדיווח והביקורת החלות על חברות ציבוריות בישראל.",
+  },
+  {
+    label: "רשות המסים – הוראות ניהול פנקסי חשבונות",
+    url: "https://www.gov.il/he/departments/israel_tax_authority",
+    source: "רשות המסים בישראל (gov.il)",
+    description: "הוראות מקצועיות לניהול פנקסים, סקירת חשבונות וביקורת.",
+  },
+  {
+    label: "רשם החברות – חובת הגשת דוח שנתי",
+    url: "https://www.gov.il/he/departments/israeli_corporations_authority",
+    source: "רשות התאגידים – משרד המשפטים (gov.il)",
+    description: "חובות דיווח של חברה בע״מ, כולל דוחות מבוקרים ואגרה שנתית.",
+  },
+  {
+    label: "IAS Plus – מרכז הידע ל-IFRS",
+    url: "https://www.iasplus.com/en",
+    source: "Deloitte",
+    description: "מדריכי IFRS מלאים, תקנים חדשים ופרסומים מקצועיים.",
+  },
+  {
+    label: "PwC – IFRS Reporting Services",
+    url: "https://www.pwc.com/gx/en/services/audit-assurance/ifrs-reporting.html",
+    source: "PwC",
+    description: "מדריך יישום התקינה הבינלאומית וניתוחים מקצועיים.",
+  },
+  {
+    label: "KPMG Israel – Audit & Assurance",
+    url: "https://kpmg.com/il/en/home/services/audit.html",
+    source: "KPMG Israel",
+    description: "עקרונות איכות ומתודולוגיית ביקורת של Big Four בישראל.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -68,6 +108,7 @@ export const Route = createFileRoute("/audit")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
     />
   ),
 });

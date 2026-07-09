@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ReceiptText } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "המוסד לביטוח לאומי – מעסיקים",
+    url: "https://www.btl.gov.il/Employers/Pages/default.aspx",
+    source: "ביטוח לאומי (btl.gov.il)",
+    description: "שיעורי דמי ביטוח, דיווח 102, ניכויים ותעריפי מעסיק ועובד.",
+  },
+  {
+    label: "רשות המסים – ניכויים ושכר",
+    url: "https://www.gov.il/he/departments/topics/employer_deductions",
+    source: "רשות המסים (gov.il)",
+    description: "מדרגות מס, נקודות זיכוי, טפסי 101 ו-106.",
+  },
+  {
+    label: "סעיף 102 – אופציות לעובדים",
+    url: "https://www.gov.il/he/departments/general/section_102_employee_options",
+    source: "רשות המסים (gov.il)",
+    description: "מסלול הוני ופירותי, אישור תוכנית ומינוי נאמן.",
+  },
+  {
+    label: "משרד העבודה – זכויות עובדים ושכר מינימום",
+    url: "https://www.gov.il/he/departments/ministry_of_labor_and_social_affairs",
+    source: "משרד העבודה (gov.il)",
+    description: "חוקי עבודה, שכר מינימום, ימי חופשה והבראה.",
+  },
+  {
+    label: "PwC Israel – Global Mobility & Payroll",
+    url: "https://www.pwc.com/il/en/services/tax/global-mobility.html",
+    source: "PwC Israel",
+    description: "היבטי שכר, ניוד עובדים בין־לאומי ותכנון מס.",
+  },
+  {
+    label: "KPMG Israel – Employee Share Plans",
+    url: "https://kpmg.com/il/en/home/services/tax.html",
+    source: "KPMG Israel",
+    description: "ניתוח תוכניות אופציות 102 במסלול הוני לחברות טכנולוגיה.",
+  },
+];
+
 
 const FAQS = [
   {
@@ -63,6 +103,7 @@ export const Route = createFileRoute("/payroll")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
     />
   ),
 });
