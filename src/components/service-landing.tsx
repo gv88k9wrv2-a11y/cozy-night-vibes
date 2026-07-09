@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
+import { BookOpen, CheckCircle2, ExternalLink, MessageCircle, Phone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import {
   FloatingWhatsApp,
@@ -10,6 +10,13 @@ import {
 
 export type ServiceFAQ = { q: string; a: string };
 
+export type ServiceResource = {
+  label: string;
+  url: string;
+  source: string;
+  description?: string;
+};
+
 export type ServiceLandingProps = {
   eyebrow: string;
   title: string;
@@ -19,6 +26,7 @@ export type ServiceLandingProps = {
   faqs: ServiceFAQ[];
   ctaHeadline?: string;
   icon: LucideIcon;
+  resources?: ServiceResource[];
 };
 
 export function ServiceLanding({
