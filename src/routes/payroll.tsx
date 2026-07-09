@@ -103,6 +103,7 @@ export const Route = createFileRoute("/payroll")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
     />
   ),
 });
