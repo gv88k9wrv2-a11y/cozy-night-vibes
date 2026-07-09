@@ -1,6 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Rocket } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
+import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
+
+const RESOURCES: ServiceResource[] = [
+  {
+    label: "רשות החדשנות – מסלולי מענקים ל-R&D",
+    url: "https://innovationisrael.org.il",
+    source: "רשות החדשנות (innovationisrael.org.il)",
+    description: "קרן המו״פ, מסלול תנופה, ותוכניות לחברות טכנולוגיה בשלבים שונים.",
+  },
+  {
+    label: "רשות המסים – סעיף 102 לפקודת מס הכנסה",
+    url: "https://www.gov.il/he/departments/general/section_102_employee_options",
+    source: "רשות המסים (gov.il)",
+    description: "מסלול הוני 25%, אישור נאמן ותהליך הגשת תוכנית אופציות.",
+  },
+  {
+    label: "חוק עידוד השקעות הון – מפעל טכנולוגי מועדף",
+    url: "https://www.gov.il/he/departments/topics/preferred_technology_enterprise",
+    source: "רשות המסים (gov.il)",
+    description: "שיעורי מס מופחתים 6%/12% ומענקים לחברות היי-טק.",
+  },
+  {
+    label: "רשם החברות – הקמת חברה בע״מ",
+    url: "https://www.gov.il/he/departments/israeli_corporations_authority",
+    source: "רשות התאגידים – משרד המשפטים (gov.il)",
+    description: "רישום חברה, הגשת תקנון והסכמי מייסדים.",
+  },
+  {
+    label: "PwC Israel – Emerging Companies (Startups)",
+    url: "https://www.pwc.com/il/en/services/tax/emerging-companies.html",
+    source: "PwC Israel",
+    description: "ליווי סטארטאפים בגיוסים, Flip ו-Due Diligence.",
+  },
+  {
+    label: "Deloitte Israel – High-Tech Practice",
+    url: "https://www2.deloitte.com/il/en/pages/technology-media-and-telecommunications/topics/technology.html",
+    source: "Deloitte Israel",
+    description: "מחקר Big Four על שוק הטכנולוגיה הישראלי וגיוסי הון.",
+  },
+];
+
 
 const FAQS = [
   {
