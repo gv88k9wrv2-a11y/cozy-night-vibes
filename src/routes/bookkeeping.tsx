@@ -109,6 +109,7 @@ export const Route = createFileRoute("/bookkeeping")({
         },
       ]}
       faqs={FAQS}
+      resources={RESOURCES}
     />
   ),
 });
