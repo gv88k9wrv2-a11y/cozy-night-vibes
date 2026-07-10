@@ -1,46 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Rocket } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
-
-const RESOURCES: ServiceResource[] = [
-  {
-    label: "רשות החדשנות – מסלולי מענקים ל-R&D",
-    url: "https://innovationisrael.org.il",
-    source: "רשות החדשנות (innovationisrael.org.il)",
-    description: "קרן המו״פ, מסלול תנופה, ותוכניות לחברות טכנולוגיה בשלבים שונים.",
-  },
-  {
-    label: "רשות המסים – סעיף 102 לפקודת מס הכנסה",
-    url: "https://www.gov.il/he/departments/general/section_102_employee_options",
-    source: "רשות המסים (gov.il)",
-    description: "מסלול הוני 25%, אישור נאמן ותהליך הגשת תוכנית אופציות.",
-  },
-  {
-    label: "חוק עידוד השקעות הון – מפעל טכנולוגי מועדף",
-    url: "https://www.gov.il/he/departments/topics/preferred_technology_enterprise",
-    source: "רשות המסים (gov.il)",
-    description: "שיעורי מס מופחתים 6%/12% ומענקים לחברות היי-טק.",
-  },
-  {
-    label: "רשם החברות – הקמת חברה בע״מ",
-    url: "https://www.gov.il/he/departments/israeli_corporations_authority",
-    source: "רשות התאגידים – משרד המשפטים (gov.il)",
-    description: "רישום חברה, הגשת תקנון והסכמי מייסדים.",
-  },
-  {
-    label: "PwC Israel – Emerging Companies (Startups)",
-    url: "https://www.pwc.com/il/en/services/tax/emerging-companies.html",
-    source: "PwC Israel",
-    description: "ליווי סטארטאפים בגיוסים, Flip ו-Due Diligence.",
-  },
-  {
-    label: "Deloitte Israel – High-Tech Practice",
-    url: "https://www2.deloitte.com/il/en/pages/technology-media-and-telecommunications/topics/technology.html",
-    source: "Deloitte Israel",
-    description: "מחקר Big Four על שוק הטכנולוגיה הישראלי וגיוסי הון.",
-  },
-];
-
+import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 
 const FAQS = [
   {
@@ -62,6 +22,18 @@ const FAQS = [
   {
     q: "מה תדירות הדיווח לסטארטאפ?",
     a: "מומלץ דיווח חודשי שוטף להנהלה, ורבעונית למשקיעים. אנחנו מספקים דוחות ניהוליים ברורים שמתאימים להצגה לבורד ולמשקיעים.",
+  },
+  {
+    q: "מה זה מפעל טכנולוגי מועדף ומה החיסכון במס?",
+    a: "חברות שעומדות בקריטריונים של חוק עידוד השקעות הון (השקעה ב-R&D, מחזור מסוים, הכנסה טכנולוגית) זכאיות למס חברות מופחת של 12% (או 6% למפעל טכנולוגי מועדף מיוחד), לעומת 23% במסלול הרגיל. אנחנו בודקים זכאות ומגישים בקשה לרשות המסים.",
+  },
+  {
+    q: "מה עולה מבנה Israeli-Delaware Flip?",
+    a: "העלויות המקצועיות הכוללות (משפטיות + חשבונאיות בשתי המדינות + אישור פקיד השומה למיסוי דחוי) נעות בטווח רחב בהתאם למורכבות. אנחנו מציגים תמונה כלכלית מלאה עוד לפני שמתחילים, כך שאין הפתעות.",
+  },
+  {
+    q: "לפני איזה סבב גיוס צריך התארגנות מיוחדת?",
+    a: "מומלץ להתחיל התארגנות לפחות 3-4 חודשים לפני Priced Round (Seed/A). זה הזמן להסדיר Cap Table נקי, לעדכן דוחות כספיים ולפתוח Data Room. Due Diligence טכני-חשבונאי מקצועי מקצר משמעותית את זמן הסגירה.",
   },
 ];
 
@@ -98,6 +70,8 @@ export const Route = createFileRoute("/cpa-startups")({
         "תוכניות אופציות לעובדים (102 הוני / הכנסה)",
         "Israeli-Delaware Flip ופעילות בינלאומית",
         "דוחות ניהוליים למשקיעים ולבורד",
+        "מפעל טכנולוגי מועדף – 6%/12% מס חברות",
+        "ליווי מלא ב-Due Diligence לפני Exit",
       ]}
       sections={[
         {
@@ -113,16 +87,48 @@ export const Route = createFileRoute("/cpa-startups")({
           ],
         },
         {
+          title: "השלבים בחיי סטארטאפ – ואיך אנחנו נכנסים בכל אחד",
+          body: "לכל שלב אתגרים משלו. אנחנו מלווים מהיום הראשון עד ה-Exit:",
+          bullets: [
+            "Pre-Seed: הקמת ישות, בחירת מבנה, הסכמי מייסדים, Vesting ו-83(b)",
+            "Seed: פתיחת ספרים, ניהול מזומן, מודל תזרים, ראשית 102 לעובדים",
+            "Series A: דוחות כספיים לפי IFRS/US-GAAP, בקרה תקציבית, Board reporting",
+            "Growth: תמחור פנימי (Transfer Pricing), הרחבה בינלאומית, מפעל מועדף",
+            "Exit / IPO: Data Room מלא, ליווי DD, מיסוי מייסדים ואופציות",
+          ],
+        },
+        {
           title: "אופציות לעובדים (סעיף 102)",
           body: "אופציות הן כלי גיוס וגיוס-אמון קריטי בסטארטאפים. אנחנו מכינים תוכנית 102 במסלול ההוני (מיסוי מופחת של 25%), מטפלים באישור פקיד השומה, מלווים את הנאמן ומדריכים את העובדים בהיבטי המס במימוש ובמכירה.",
+          bullets: [
+            "הכנת תוכנית ESOP והגשתה לרשות המסים",
+            "מינוי וליווי נאמן 102",
+            "שערוך אופציות (409A / IFRS 2) לצורכי דיווח",
+            "ליווי עובדים במימוש ובמכירה – חיסכון מס משמעותי",
+          ],
         },
         {
           title: "פעילות בינלאומית ו-Flip",
           body: "רוב הסטארטאפים הישראליים בסופו של דבר מגיעים לפעילות בארה״ב או באירופה. אנחנו מלווים תהליכי Israeli-Delaware Flip, הקמת חברות בנות ומבנים בינלאומיים, כולל שיקולי Transfer Pricing ואמנות מס.",
+          bullets: [
+            "ליווי Flip משפטי-חשבונאי מלא לדלאוור",
+            "הקמת חברות בנות בארה״ב, אירופה, סינגפור",
+            "מדיניות Transfer Pricing ותיעוד לפי OECD",
+            "עבודה מול רו״ח מקומיים ומשרדי עו״ד בכל היעדים",
+          ],
+        },
+        {
+          title: "הטבות מס לחברות טכנולוגיה",
+          body: "החקיקה בישראל מעניקה הטבות משמעותיות לחברות טכנולוגיה שעומדות בקריטריונים – ואנחנו מוודאים שאתם מנצלים אותן במלואן:",
+          bullets: [
+            "מפעל מועדף / מפעל טכנולוגי מועדף – מס חברות 6%-12%",
+            "מסלולי מענקים ברשות החדשנות (קרן המו״פ, תנופה, מגנ״ט)",
+            "הכרה בהוצאות R&D בזמן אמת",
+            "פטור על דיבידנד ממפעל מועדף בתנאים מסוימים",
+          ],
         },
       ]}
       faqs={FAQS}
-      resources={RESOURCES}
       ctaHeadline="חושבים על הקמת סטארטאפ או לפני גיוס? בואו נדבר."
     />
   ),

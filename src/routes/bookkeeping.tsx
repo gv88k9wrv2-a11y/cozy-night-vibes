@@ -1,46 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Calculator } from "lucide-react";
-import { ServiceLanding, buildFaqJsonLd, type ServiceResource } from "../components/service-landing";
-
-const RESOURCES: ServiceResource[] = [
-  {
-    label: "רשות המסים – ניהול פנקסי חשבונות",
-    url: "https://www.gov.il/he/departments/israel_tax_authority",
-    source: "רשות המסים בישראל (gov.il)",
-    description: "הוראה מקצועית 36 ותקנות ניהול ספרים לעוסקים וחברות.",
-  },
-  {
-    label: "מע״מ – שערים, דיווח וחשבוניות",
-    url: "https://www.gov.il/he/departments/topics/vat",
-    source: "רשות המסים (gov.il)",
-    description: "שיעורי המע״מ, חובת דיווח תקופתי, חשבונית מס וחשבונית מס דיגיטלית.",
-  },
-  {
-    label: "חשבונית ישראל – מודל חשבוניות במרשם",
-    url: "https://www.gov.il/he/departments/general/invoices_israel",
-    source: "רשות המסים (gov.il)",
-    description: "רפורמת ׳חשבונית ישראל׳ – מספרי הקצאה לחשבוניות מס.",
-  },
-  {
-    label: "ביטוח לאומי – דיווח מעסיקים ועצמאים",
-    url: "https://www.btl.gov.il",
-    source: "המוסד לביטוח לאומי (btl.gov.il)",
-    description: "דיווחי 102, שיעורי דמי ביטוח לעצמאים ולמעסיקים.",
-  },
-  {
-    label: "Deloitte Israel – Accounting & Reporting",
-    url: "https://www2.deloitte.com/il/en/services/audit.html",
-    source: "Deloitte Israel",
-    description: "נהלי הנהלת חשבונות ובקרה פנימית בסטנדרט Big Four.",
-  },
-  {
-    label: "EY Israel – Tax & Compliance",
-    url: "https://www.ey.com/en_il/services/tax",
-    source: "EY Israel",
-    description: "עדכוני חקיקה, מע״מ ואוטומציה של תהליכי הנהלת חשבונות.",
-  },
-];
-
+import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 
 const FAQS = [
   {
@@ -109,7 +69,6 @@ export const Route = createFileRoute("/bookkeeping")({
         },
       ]}
       faqs={FAQS}
-      resources={RESOURCES}
     />
   ),
 });
