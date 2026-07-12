@@ -128,6 +128,7 @@ function HomePage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
+      <main id="main-content">
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0">
@@ -377,6 +378,8 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <SiteFooter />
       <FloatingWhatsApp />

@@ -38,6 +38,7 @@ export function ServiceLanding({
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
+      <main id="main-content">
       {/* Hero */}
       <section className="border-b border-border/60 bg-gradient-to-b from-secondary/60 to-background">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
@@ -171,6 +172,8 @@ export function ServiceLanding({
           </div>
         </div>
       </section>
+
+      </main>
 
       <SiteFooter />
       <FloatingWhatsApp />

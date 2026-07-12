@@ -181,6 +181,7 @@ function PostNotFound() {
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
+      <main id="main-content">
       <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
         <h1 className="font-display text-3xl font-bold text-primary">המאמר לא נמצא</h1>
         <p className="mt-3 text-muted-foreground">ייתכן שהקישור השתנה או שהמאמר הוסר.</p>
@@ -191,6 +192,7 @@ function PostNotFound() {
           חזרה לבלוג
         </Link>
       </div>
+      </main>
       <SiteFooter />
     </div>
   );

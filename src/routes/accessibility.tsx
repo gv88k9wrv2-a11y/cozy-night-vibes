@@ -27,6 +27,7 @@ function AccessibilityPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
+      <main id="main-content">
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
           <h1 className="font-display text-4xl font-bold text-primary sm:text-5xl">
@@ -72,6 +73,8 @@ function AccessibilityPage() {
           </p>
         </div>
       </section>
+
+      </main>
 
       <SiteFooter />
       <FloatingWhatsApp />

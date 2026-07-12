@@ -53,6 +53,7 @@ function TeamPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
 
+      <main id="main-content">
       <section className="border-b border-border/60 bg-gradient-to-b from-secondary/60 to-background">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20">
           <div className="text-sm font-semibold uppercase tracking-widest text-gold">
@@ -124,6 +125,8 @@ function TeamPage() {
           </p>
         </div>
       </section>
+
+      </main>
 
       <SiteFooter />
       <FloatingWhatsApp />
