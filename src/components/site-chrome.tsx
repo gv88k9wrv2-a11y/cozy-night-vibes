@@ -221,6 +221,13 @@ export function SiteHeader() {
 
         {/* Right cluster */}
         <div className="flex shrink-0 items-center gap-2">
+          <Link
+            to="/en"
+            className="hidden items-center gap-1 rounded-md border border-border px-2.5 py-1.5 text-xs font-semibold text-primary hover:bg-secondary sm:inline-flex"
+            aria-label="English version"
+          >
+            EN
+          </Link>
           <a
             href="tel:+97299582211"
             className="hidden items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-secondary md:inline-flex"
