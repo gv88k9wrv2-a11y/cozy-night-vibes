@@ -29,6 +29,15 @@ import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en.index'
+import { Route as EnTaxConsultingRouteImport } from './routes/en.tax-consulting'
+import { Route as EnPayrollRouteImport } from './routes/en.payroll'
+import { Route as EnCpaStartupsRouteImport } from './routes/en.cpa-startups'
+import { Route as EnCpaInternationalRouteImport } from './routes/en.cpa-international'
+import { Route as EnCpaHerzliyaRouteImport } from './routes/en.cpa-herzliya'
+import { Route as EnCpaFreelancersRouteImport } from './routes/en.cpa-freelancers'
+import { Route as EnCpaForeignCompaniesRouteImport } from './routes/en.cpa-foreign-companies'
+import { Route as EnBookkeepingRouteImport } from './routes/en.bookkeeping'
+import { Route as EnAuditRouteImport } from './routes/en.audit'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TeamRoute = TeamRouteImport.update({
@@ -131,6 +140,51 @@ const EnIndexRoute = EnIndexRouteImport.update({
   path: '/',
   getParentRoute: () => EnRoute,
 } as any)
+const EnTaxConsultingRoute = EnTaxConsultingRouteImport.update({
+  id: '/tax-consulting',
+  path: '/tax-consulting',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnPayrollRoute = EnPayrollRouteImport.update({
+  id: '/payroll',
+  path: '/payroll',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCpaStartupsRoute = EnCpaStartupsRouteImport.update({
+  id: '/cpa-startups',
+  path: '/cpa-startups',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCpaInternationalRoute = EnCpaInternationalRouteImport.update({
+  id: '/cpa-international',
+  path: '/cpa-international',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCpaHerzliyaRoute = EnCpaHerzliyaRouteImport.update({
+  id: '/cpa-herzliya',
+  path: '/cpa-herzliya',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCpaFreelancersRoute = EnCpaFreelancersRouteImport.update({
+  id: '/cpa-freelancers',
+  path: '/cpa-freelancers',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCpaForeignCompaniesRoute = EnCpaForeignCompaniesRouteImport.update({
+  id: '/cpa-foreign-companies',
+  path: '/cpa-foreign-companies',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnBookkeepingRoute = EnBookkeepingRouteImport.update({
+  id: '/bookkeeping',
+  path: '/bookkeeping',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnAuditRoute = EnAuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => EnRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -158,6 +212,15 @@ export interface FileRoutesByFullPath {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/audit': typeof EnAuditRoute
+  '/en/bookkeeping': typeof EnBookkeepingRoute
+  '/en/cpa-foreign-companies': typeof EnCpaForeignCompaniesRoute
+  '/en/cpa-freelancers': typeof EnCpaFreelancersRoute
+  '/en/cpa-herzliya': typeof EnCpaHerzliyaRoute
+  '/en/cpa-international': typeof EnCpaInternationalRoute
+  '/en/cpa-startups': typeof EnCpaStartupsRoute
+  '/en/payroll': typeof EnPayrollRoute
+  '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
@@ -180,6 +243,15 @@ export interface FileRoutesByTo {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/audit': typeof EnAuditRoute
+  '/en/bookkeeping': typeof EnBookkeepingRoute
+  '/en/cpa-foreign-companies': typeof EnCpaForeignCompaniesRoute
+  '/en/cpa-freelancers': typeof EnCpaFreelancersRoute
+  '/en/cpa-herzliya': typeof EnCpaHerzliyaRoute
+  '/en/cpa-international': typeof EnCpaInternationalRoute
+  '/en/cpa-startups': typeof EnCpaStartupsRoute
+  '/en/payroll': typeof EnPayrollRoute
+  '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
@@ -204,6 +276,15 @@ export interface FileRoutesById {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/audit': typeof EnAuditRoute
+  '/en/bookkeeping': typeof EnBookkeepingRoute
+  '/en/cpa-foreign-companies': typeof EnCpaForeignCompaniesRoute
+  '/en/cpa-freelancers': typeof EnCpaFreelancersRoute
+  '/en/cpa-herzliya': typeof EnCpaHerzliyaRoute
+  '/en/cpa-international': typeof EnCpaInternationalRoute
+  '/en/cpa-startups': typeof EnCpaStartupsRoute
+  '/en/payroll': typeof EnPayrollRoute
+  '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
@@ -229,6 +310,15 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en/audit'
+    | '/en/bookkeeping'
+    | '/en/cpa-foreign-companies'
+    | '/en/cpa-freelancers'
+    | '/en/cpa-herzliya'
+    | '/en/cpa-international'
+    | '/en/cpa-startups'
+    | '/en/payroll'
+    | '/en/tax-consulting'
     | '/en/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -251,6 +341,15 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en/audit'
+    | '/en/bookkeeping'
+    | '/en/cpa-foreign-companies'
+    | '/en/cpa-freelancers'
+    | '/en/cpa-herzliya'
+    | '/en/cpa-international'
+    | '/en/cpa-startups'
+    | '/en/payroll'
+    | '/en/tax-consulting'
     | '/en'
   id:
     | '__root__'
@@ -274,6 +373,15 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en/audit'
+    | '/en/bookkeeping'
+    | '/en/cpa-foreign-companies'
+    | '/en/cpa-freelancers'
+    | '/en/cpa-herzliya'
+    | '/en/cpa-international'
+    | '/en/cpa-startups'
+    | '/en/payroll'
+    | '/en/tax-consulting'
     | '/en/'
   fileRoutesById: FileRoutesById
 }
@@ -441,6 +549,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnIndexRouteImport
       parentRoute: typeof EnRoute
     }
+    '/en/tax-consulting': {
+      id: '/en/tax-consulting'
+      path: '/tax-consulting'
+      fullPath: '/en/tax-consulting'
+      preLoaderRoute: typeof EnTaxConsultingRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/payroll': {
+      id: '/en/payroll'
+      path: '/payroll'
+      fullPath: '/en/payroll'
+      preLoaderRoute: typeof EnPayrollRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cpa-startups': {
+      id: '/en/cpa-startups'
+      path: '/cpa-startups'
+      fullPath: '/en/cpa-startups'
+      preLoaderRoute: typeof EnCpaStartupsRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cpa-international': {
+      id: '/en/cpa-international'
+      path: '/cpa-international'
+      fullPath: '/en/cpa-international'
+      preLoaderRoute: typeof EnCpaInternationalRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cpa-herzliya': {
+      id: '/en/cpa-herzliya'
+      path: '/cpa-herzliya'
+      fullPath: '/en/cpa-herzliya'
+      preLoaderRoute: typeof EnCpaHerzliyaRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cpa-freelancers': {
+      id: '/en/cpa-freelancers'
+      path: '/cpa-freelancers'
+      fullPath: '/en/cpa-freelancers'
+      preLoaderRoute: typeof EnCpaFreelancersRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/cpa-foreign-companies': {
+      id: '/en/cpa-foreign-companies'
+      path: '/cpa-foreign-companies'
+      fullPath: '/en/cpa-foreign-companies'
+      preLoaderRoute: typeof EnCpaForeignCompaniesRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/bookkeeping': {
+      id: '/en/bookkeeping'
+      path: '/bookkeeping'
+      fullPath: '/en/bookkeeping'
+      preLoaderRoute: typeof EnBookkeepingRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/audit': {
+      id: '/en/audit'
+      path: '/audit'
+      fullPath: '/en/audit'
+      preLoaderRoute: typeof EnAuditRouteImport
+      parentRoute: typeof EnRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -462,10 +633,28 @@ const BlogRouteChildren: BlogRouteChildren = {
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface EnRouteChildren {
+  EnAuditRoute: typeof EnAuditRoute
+  EnBookkeepingRoute: typeof EnBookkeepingRoute
+  EnCpaForeignCompaniesRoute: typeof EnCpaForeignCompaniesRoute
+  EnCpaFreelancersRoute: typeof EnCpaFreelancersRoute
+  EnCpaHerzliyaRoute: typeof EnCpaHerzliyaRoute
+  EnCpaInternationalRoute: typeof EnCpaInternationalRoute
+  EnCpaStartupsRoute: typeof EnCpaStartupsRoute
+  EnPayrollRoute: typeof EnPayrollRoute
+  EnTaxConsultingRoute: typeof EnTaxConsultingRoute
   EnIndexRoute: typeof EnIndexRoute
 }
 
 const EnRouteChildren: EnRouteChildren = {
+  EnAuditRoute: EnAuditRoute,
+  EnBookkeepingRoute: EnBookkeepingRoute,
+  EnCpaForeignCompaniesRoute: EnCpaForeignCompaniesRoute,
+  EnCpaFreelancersRoute: EnCpaFreelancersRoute,
+  EnCpaHerzliyaRoute: EnCpaHerzliyaRoute,
+  EnCpaInternationalRoute: EnCpaInternationalRoute,
+  EnCpaStartupsRoute: EnCpaStartupsRoute,
+  EnPayrollRoute: EnPayrollRoute,
+  EnTaxConsultingRoute: EnTaxConsultingRoute,
   EnIndexRoute: EnIndexRoute,
 }
 

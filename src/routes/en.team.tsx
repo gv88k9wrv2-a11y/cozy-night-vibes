@@ -1,0 +1,68 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Users } from "lucide-react";
+import { FloatingWhatsAppEn, SiteFooterEn, SiteHeaderEn } from "../components/site-chrome-en";
+
+const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
+
+export const Route = createFileRoute("/en/team")({
+  head: () => ({
+    meta: [
+      { title: "Our Team — Nimrodi & Co. CPA" },
+      { name: "description", content: "Meet the partners and senior team at Nimrodi & Co., a boutique CPA firm in Herzliya Pituach." },
+      { property: "og:title", content: "Our Team — Nimrodi & Co." },
+      { property: "og:description", content: "Senior partners with decades of experience across tax, audit and cross-border structures." },
+      { property: "og:url", content: `${BASE}/en/team` },
+      { property: "og:image", content: `${BASE}/og-image.jpg` },
+      { name: "twitter:image", content: `${BASE}/og-image.jpg` },
+    ],
+    links: [
+      { rel: "canonical", href: `${BASE}/en/team` },
+      { rel: "alternate", hrefLang: "he-IL", href: `${BASE}/team` },
+      { rel: "alternate", hrefLang: "en-US", href: `${BASE}/en/team` },
+    ],
+  }),
+  component: TeamEn,
+});
+
+const TEAM = [
+  { name: "Shlomo Nimrodi, CPA", role: "Founding Partner", bio: "25+ years in Israeli and international taxation. Big-Four alumnus. Trusted advisor to founders, executives and global families." },
+  { name: "Senior Tax Partner", role: "Tax Advisory", bio: "Specializes in Pre-Rulings, corporate reorganizations and cross-border transactions." },
+  { name: "Audit Partner", role: "Audit & Assurance", bio: "Statutory audits under Israeli GAAP and IFRS, M&A due diligence and quality of earnings work." },
+  { name: "International Tax Manager", role: "Relocation & Treaties", bio: "US-Israel taxation, olim benefits, residency severance and treaty planning." },
+];
+
+function TeamEn() {
+  return (
+    <div className="min-h-screen bg-background">
+      <SiteHeaderEn />
+      <main id="main-content">
+        <section className="border-b border-border/60 bg-gradient-to-b from-secondary/60 to-background">
+          <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-semibold text-gold">
+              <Users className="h-3.5 w-3.5" aria-hidden />
+              The team
+            </div>
+            <h1 className="mt-4 font-display text-4xl font-bold text-primary sm:text-5xl">Our partners and senior team</h1>
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
+              Every engagement is led by a senior partner. Continuity, depth and personal attention — that's the boutique promise.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="mx-auto grid max-w-5xl gap-6 px-4 sm:px-6 md:grid-cols-2">
+            {TEAM.map((m) => (
+              <article key={m.name} className="rounded-xl border border-border bg-card p-6">
+                <h2 className="font-display text-xl font-bold text-primary">{m.name}</h2>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold">{m.role}</div>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+      <SiteFooterEn />
+      <FloatingWhatsAppEn />
+    </div>
+  );
+}
