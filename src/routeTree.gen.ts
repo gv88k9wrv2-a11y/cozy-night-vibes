@@ -28,6 +28,7 @@ import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EnIndexRouteImport } from './routes/en.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TeamRoute = TeamRouteImport.update({
@@ -125,6 +126,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EnRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -144,7 +150,7 @@ export interface FileRoutesByFullPath {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
-  '/en': typeof EnRoute
+  '/en': typeof EnRouteWithChildren
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -152,6 +158,7 @@ export interface FileRoutesByFullPath {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -166,7 +173,6 @@ export interface FileRoutesByTo {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
-  '/en': typeof EnRoute
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -174,6 +180,7 @@ export interface FileRoutesByTo {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -189,7 +196,7 @@ export interface FileRoutesById {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
-  '/en': typeof EnRoute
+  '/en': typeof EnRouteWithChildren
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -197,6 +204,7 @@ export interface FileRoutesById {
   '/tax-consulting': typeof TaxConsultingRoute
   '/team': typeof TeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -221,6 +229,7 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -235,7 +244,6 @@ export interface FileRouteTypes {
     | '/cpa-herzliya'
     | '/cpa-international'
     | '/cpa-startups'
-    | '/en'
     | '/faq'
     | '/payroll'
     | '/services'
@@ -243,6 +251,7 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en'
   id:
     | '__root__'
     | '/'
@@ -265,6 +274,7 @@ export interface FileRouteTypes {
     | '/tax-consulting'
     | '/team'
     | '/blog/$slug'
+    | '/en/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -280,7 +290,7 @@ export interface RootRouteChildren {
   CpaHerzliyaRoute: typeof CpaHerzliyaRoute
   CpaInternationalRoute: typeof CpaInternationalRoute
   CpaStartupsRoute: typeof CpaStartupsRoute
-  EnRoute: typeof EnRoute
+  EnRoute: typeof EnRouteWithChildren
   FaqRoute: typeof FaqRoute
   PayrollRoute: typeof PayrollRoute
   ServicesRoute: typeof ServicesRoute
@@ -424,6 +434,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en/': {
+      id: '/en/'
+      path: '/'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -444,6 +461,16 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface EnRouteChildren {
+  EnIndexRoute: typeof EnIndexRoute
+}
+
+const EnRouteChildren: EnRouteChildren = {
+  EnIndexRoute: EnIndexRoute,
+}
+
+const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -457,7 +484,7 @@ const rootRouteChildren: RootRouteChildren = {
   CpaHerzliyaRoute: CpaHerzliyaRoute,
   CpaInternationalRoute: CpaInternationalRoute,
   CpaStartupsRoute: CpaStartupsRoute,
-  EnRoute: EnRoute,
+  EnRoute: EnRouteWithChildren,
   FaqRoute: FaqRoute,
   PayrollRoute: PayrollRoute,
   ServicesRoute: ServicesRoute,
