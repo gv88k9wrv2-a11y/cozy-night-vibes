@@ -15,6 +15,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PayrollRouteImport } from './routes/payroll'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as EnRouteImport } from './routes/en'
 import { Route as CpaStartupsRouteImport } from './routes/cpa-startups'
 import { Route as CpaInternationalRouteImport } from './routes/cpa-international'
 import { Route as CpaHerzliyaRouteImport } from './routes/cpa-herzliya'
@@ -57,6 +58,11 @@ const PayrollRoute = PayrollRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnRoute = EnRouteImport.update({
+  id: '/en',
+  path: '/en',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CpaStartupsRoute = CpaStartupsRouteImport.update({
@@ -138,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
+  '/en': typeof EnRoute
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -159,6 +166,7 @@ export interface FileRoutesByTo {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
+  '/en': typeof EnRoute
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -181,6 +189,7 @@ export interface FileRoutesById {
   '/cpa-herzliya': typeof CpaHerzliyaRoute
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
+  '/en': typeof EnRoute
   '/faq': typeof FaqRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
@@ -204,6 +213,7 @@ export interface FileRouteTypes {
     | '/cpa-herzliya'
     | '/cpa-international'
     | '/cpa-startups'
+    | '/en'
     | '/faq'
     | '/payroll'
     | '/services'
@@ -225,6 +235,7 @@ export interface FileRouteTypes {
     | '/cpa-herzliya'
     | '/cpa-international'
     | '/cpa-startups'
+    | '/en'
     | '/faq'
     | '/payroll'
     | '/services'
@@ -246,6 +257,7 @@ export interface FileRouteTypes {
     | '/cpa-herzliya'
     | '/cpa-international'
     | '/cpa-startups'
+    | '/en'
     | '/faq'
     | '/payroll'
     | '/services'
@@ -268,6 +280,7 @@ export interface RootRouteChildren {
   CpaHerzliyaRoute: typeof CpaHerzliyaRoute
   CpaInternationalRoute: typeof CpaInternationalRoute
   CpaStartupsRoute: typeof CpaStartupsRoute
+  EnRoute: typeof EnRoute
   FaqRoute: typeof FaqRoute
   PayrollRoute: typeof PayrollRoute
   ServicesRoute: typeof ServicesRoute
@@ -318,6 +331,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en': {
+      id: '/en'
+      path: '/en'
+      fullPath: '/en'
+      preLoaderRoute: typeof EnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cpa-startups': {
@@ -437,6 +457,7 @@ const rootRouteChildren: RootRouteChildren = {
   CpaHerzliyaRoute: CpaHerzliyaRoute,
   CpaInternationalRoute: CpaInternationalRoute,
   CpaStartupsRoute: CpaStartupsRoute,
+  EnRoute: EnRoute,
   FaqRoute: FaqRoute,
   PayrollRoute: PayrollRoute,
   ServicesRoute: ServicesRoute,
