@@ -94,6 +94,19 @@ export function ServiceLanding({
               09-9582211
             </a>
           </div>
+
+          {heroImage ? (
+            <div className="mt-12 overflow-hidden rounded-2xl border border-border shadow-xl">
+              <img
+                src={heroImage}
+                alt={heroImageAlt ?? title}
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-64 w-full object-cover sm:h-80 md:h-96"
+              />
+            </div>
+          ) : null}
         </div>
       </section>
 
