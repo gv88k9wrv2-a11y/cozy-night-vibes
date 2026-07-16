@@ -208,7 +208,8 @@ function PostNotFound() {
 }
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData() as { post: PostContent; slug: string };
+  const { post, slug } = Route.useLoaderData() as { post: PostContent; slug: string };
+  const heroImg = POST_IMAGES[slug];
 
   return (
     <div className="min-h-screen bg-background">
