@@ -13,3 +13,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
 });
+export default defineConfig({
+  base: '/cozy-night-vibes/',  // <--- הוסף את השורה הזו עם שם התיקייה המדויק שלך
+  // ... שאר ההגדרות הקיימות שלך
+})
