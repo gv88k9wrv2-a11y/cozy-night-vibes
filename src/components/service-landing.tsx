@@ -33,6 +33,8 @@ export function ServiceLanding({
   faqs,
   ctaHeadline = "מוכנים להתקדם? נשמח לפגישת ייעוץ ראשונית ללא התחייבות.",
   icon: Icon,
+  heroImage,
+  heroImageAlt,
 }: ServiceLandingProps) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
