@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FileSearch } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-audit.jpg";
-import heroImg from "../assets/service-audit.jpg";
 
 const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
 const FAQS = [
