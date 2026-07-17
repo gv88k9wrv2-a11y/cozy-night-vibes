@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: List dist contents
+        run: |
+          echo "Checking dist directory..."
+          ls -la dist/ || echo "dist not found"
+          find . -name "*.html" -o -name "*.js" -o -name "*.css" | head -20
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
