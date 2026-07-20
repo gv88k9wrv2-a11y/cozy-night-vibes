@@ -165,16 +165,17 @@ export function SiteHeaderEn() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
-            <Link
-              to="/"
+            <a
+              href={heHref}
               className="hidden items-center gap-1 rounded-md border border-border px-2.5 py-1.5 text-xs font-semibold text-primary hover:bg-secondary sm:inline-flex"
               aria-label="Hebrew version"
+              hrefLang="he"
             >
               עברית
-            </Link>
-            <a href="tel:+97299582211" className="hidden items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-secondary md:inline-flex">
+            </a>
+            <a href={PHONE_TEL} className="hidden items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-secondary md:inline-flex">
               <Phone className="h-4 w-4" aria-hidden />
-              +972-9-9582211
+              {PHONE_DISPLAY_EN}
             </a>
             <a
               href={WHATSAPP_URL_EN}
@@ -185,7 +186,7 @@ export function SiteHeaderEn() {
               <MessageCircle className="h-4 w-4" aria-hidden />
               Free consult
             </a>
-            <MobileMenuEn />
+            <MobileMenuEn heHref={heHref} />
           </div>
         </div>
       </header>
