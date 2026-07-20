@@ -9,6 +9,7 @@ import {
   WHATSAPP_URL_EN,
 } from "./site-chrome-en";
 import { LeadForm } from "./lead-form";
+import { ScrollToTop } from "./scroll-to-top";
 
 export type ServiceFAQ = { q: string; a: string };
 
