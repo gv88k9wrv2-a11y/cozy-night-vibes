@@ -65,7 +65,7 @@ function ContactPage() {
               icon={Phone}
               title="טלפון"
               value="09-9582211"
-              href="tel:+97299582211"
+              href="tel:099582211"
             />
             <ContactCard
               icon={MessageCircle}
