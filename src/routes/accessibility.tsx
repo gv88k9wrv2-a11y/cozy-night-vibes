@@ -69,7 +69,7 @@ function AccessibilityPage() {
             </li>
           </ul>
           <p className="pt-4 text-sm">
-            הצהרה זו עודכנה לאחרונה בחודש נובמבר 2026.
+            הצהרה זו עודכנה לאחרונה בחודש {new Date().toLocaleDateString("he-IL", { month: "long", year: "numeric" })}.
           </p>
         </div>
       </section>
