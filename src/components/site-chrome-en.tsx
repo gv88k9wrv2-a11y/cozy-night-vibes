@@ -23,6 +23,7 @@ const MAIN_LINKS = [
   { to: "/en/services", label: "Services" },
   { to: "/en/about", label: "About" },
   { to: "/en/team", label: "Team" },
+  { to: "/blog", label: "Blog (Hebrew)" },
   { to: "/en/faq", label: "FAQ" },
   { to: "/en/contact", label: "Contact" },
 ] as const;
