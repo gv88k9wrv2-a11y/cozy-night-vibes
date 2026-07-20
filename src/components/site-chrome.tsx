@@ -13,7 +13,6 @@ import {
   FileSearch,
   FileSpreadsheet,
   Plane,
-  Mail,
 } from "lucide-react";
 
 const WHATSAPP_URL =
