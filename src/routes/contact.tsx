@@ -60,8 +60,8 @@ function ContactPage() {
 
 
       <section className="py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-5">
-          <div className="space-y-4 lg:col-span-2">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <div className="space-y-4">
             <ContactCard
               icon={Phone}
               title="טלפון"
