@@ -377,17 +377,24 @@ export function SiteFooter() {
             משרד רואי חשבון בוטיק בהרצליה פיתוח. מעל 25 שנות ניסיון בליווי חברות,
             סטארטאפים, עצמאים ופרילנסרים.
           </p>
-          <div className="mt-4 space-y-1 text-sm text-primary-foreground/80">
+          <address className="mt-4 space-y-1 text-sm not-italic text-primary-foreground/80">
             <div>
-              <a href="tel:+97299582211" className="hover:text-gold">טלפון: 09-9582211</a>
+              <a href={PHONE_TEL} className="hover:text-gold">טלפון: {PHONE_DISPLAY}</a>
             </div>
             <div>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="hover:text-gold">
-                וואטסאפ: 054-5207207
+                וואטסאפ: {WHATSAPP_DISPLAY}
               </a>
             </div>
-            <div>הרצליה פיתוח, ישראל</div>
-          </div>
+            <div>
+              <a href={`mailto:${EMAIL}`} className="hover:text-gold">{EMAIL}</a>
+            </div>
+            <div>
+              <a href={MAPS_URL} target="_blank" rel="noopener" className="hover:text-gold">
+                {ADDRESS_HE}
+              </a>
+            </div>
+          </address>
         </div>
 
         <div>
