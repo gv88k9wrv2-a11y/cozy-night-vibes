@@ -151,7 +151,21 @@ export const Route = createFileRoute("/cpa-foreign-companies")({
             "אופטימיזציה של Withholding Tax על תמלוגים לפי אמנות מס",
           ],
         },
+        {
+          title: "Fractional CFO לחברות זרות בישראל",
+          body:
+            "חברות רב-לאומיות שפועלות בישראל צריכות דמות כספים בכירה מקומית שמדברת עם ה-HQ בשפה שלו (US GAAP / IFRS, בקרה פנימית SOX-ready), ובאותו זמן מכירה את הרגולציה הישראלית לעומק. אנחנו משמשים כ-Fractional CFO ישראלי של החברה – מגשרים בין ה-Corporate ל-Local. עמוד השירות המלא: /fractional-cfo.",
+          bullets: [
+            "Local Country Controller / Country CFO של המטה בישראל",
+            "דיווח חודשי ורבעוני ל-HQ בפורמט ובמטבע הנדרשים",
+            "בקרה תקציבית מקומית מול תוכנית ה-Group",
+            "ניהול קשרי בנקים, ביטוחים ורגולציה בישראל",
+            "תמיכה ב-Statutory Audit ובביקורת פנים של הקבוצה",
+            "הכנה ומוכנות ל-M&A, Carve-Out או Wind-Down",
+          ],
+        },
       ]}
+
       faqs={FAQS}
       ctaHeadline="שוקלים כניסה לשוק הישראלי? נשמח לתאם שיחת ייעוץ ראשונית."
     />

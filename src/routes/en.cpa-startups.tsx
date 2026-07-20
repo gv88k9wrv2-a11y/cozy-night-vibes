@@ -139,7 +139,21 @@ export const Route = createFileRoute("/en/cpa-startups")({
             "Clean tax file — no open assessments or authority arrears",
           ],
         },
+        {
+          title: "Fractional CFO — senior finance leadership for your startup",
+          body:
+            "Most Seed–Series B startups do not yet justify a full-time CFO, yet the financial decisions at that stage are critical — Runway, pricing, fundraising and Board relations. We step in as a Fractional CFO and deliver the full senior finance layer you need. See the dedicated service page: /en/fractional-cfo.",
+          bullets: [
+            "Annual budgeting, cash management and Burn / Runway",
+            "3–5 year VC-grade financial model (Base / Bull / Bear)",
+            "Monthly / quarterly Board Deck and Investor Update email",
+            "Live representation in VC and angel investor meetings",
+            "Data Room management and continuous DD readiness",
+            "Smooth handover to a full-time CFO when the time comes",
+          ],
+        },
       ]}
+
       faqs={FAQS}
       ctaHeadline="Building a startup or about to raise? Let's talk."
     />

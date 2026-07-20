@@ -202,7 +202,21 @@ export const Route = createFileRoute("/cpa-startups")({
             "הכנת Side Letters ו-Consent Forms נדרשים לסבב הבא",
           ],
         },
+        {
+          title: "Fractional CFO – ניהול כספים בכיר לסטארטאפ",
+          body:
+            "רוב הסטארטאפים בשלבי Seed–Series B עדיין לא מצדיקים CFO משרה מלאה, אבל דווקא אז ההחלטות הפיננסיות קריטיות – Runway, תמחור, גיוסים ובורד. אנחנו נכנסים כ-Fractional CFO ומספקים את כל שכבת הניהול הפיננסי הבכירה שנדרשת. ראו את עמוד השירות המלא: /fractional-cfo.",
+          bullets: [
+            "בניית תקציב שנתי, ניהול תזרים וחישובי Burn / Runway",
+            "מודל פיננסי 3–5 שנים בסטנדרט VC (Base / Bull / Bear)",
+            "Board Deck חודשי / רבעוני ו-Investor Update Email",
+            "ייצוג בישיבות מול קרנות הון סיכון ומשקיעי אנג׳ל",
+            "ניהול Data Room ומוכנות מתמדת ל-Due Diligence",
+            "מעבר חלק ל-CFO משרה מלאה כשמגיע השלב",
+          ],
+        },
       ]}
+
       faqs={FAQS}
       ctaHeadline="חושבים על הקמת סטארטאפ או לפני גיוס? בואו נדבר."
     />

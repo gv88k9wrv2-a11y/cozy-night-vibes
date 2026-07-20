@@ -118,7 +118,21 @@ export const Route = createFileRoute("/en/cpa-foreign-companies")({
             "Tax treaties with 60+ countries — bilateral relief from double taxation",
           ],
         },
+        {
+          title: "Fractional CFO for foreign companies in Israel",
+          body:
+            "Multinationals operating in Israel need a senior local finance presence that speaks the HQ's language (US GAAP / IFRS, SOX-ready internal controls) while knowing Israeli regulation in depth. We serve as the company's Israeli Fractional CFO — the bridge between Corporate and Local. Full service page: /en/fractional-cfo.",
+          bullets: [
+            "Local Country Controller / Country CFO for HQ in Israel",
+            "Monthly and quarterly reporting to HQ in the required format and currency",
+            "Local budget control aligned with the Group plan",
+            "Israeli banking, insurance and regulatory relationship management",
+            "Support for statutory audits and Group internal audit",
+            "Readiness for M&A, Carve-Out or Wind-Down",
+          ],
+        },
       ]}
+
       faqs={FAQS}
       ctaHeadline="Considering market entry to Israel? Let's schedule an intro call."
     />
