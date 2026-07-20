@@ -78,7 +78,7 @@ function ContactEn() {
                   <MessageCircle className="mt-1 h-5 w-5 text-gold" aria-hidden />
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                    <a href={WHATSAPP_URL_EN} target="_blank" rel="noopener" className="mt-1 block text-lg font-semibold text-primary hover:text-gold">+972-54-5207207</a>
+                    <a href={WHATSAPP_URL_EN} target="_blank" rel="noopener" className="mt-1 block text-lg font-semibold text-primary hover:text-gold">+972-54-6688681</a>
                   </div>
                 </div>
               </div>
@@ -98,7 +98,14 @@ function ContactEn() {
                   <MapPin className="mt-1 h-5 w-5 text-gold" aria-hidden />
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Office</div>
-                    <p className="mt-1 text-primary">Herzliya Pituach, Israel</p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=16+Galgalei+ha-Plada+St+Herzliya+Pituach"
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-1 block text-primary hover:text-gold"
+                    >
+                      16 Galgalei ha-Plada St, Herzliya Pituach
+                    </a>
                     <p className="mt-1 text-xs text-muted-foreground">Sun–Thu 08:30–18:00</p>
                   </div>
                 </div>
