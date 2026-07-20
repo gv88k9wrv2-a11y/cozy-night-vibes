@@ -210,13 +210,20 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map(({ icon: Icon, title, desc }) => (
+            {SERVICES.map(({ icon: Icon, title, desc, badge }) => (
               <article
                 key={title}
                 className="group relative overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <Icon className="h-5 w-5" aria-hidden />
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </div>
+                  {badge && (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold">
+                      ✦ {badge}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-display text-xl font-semibold text-primary">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
