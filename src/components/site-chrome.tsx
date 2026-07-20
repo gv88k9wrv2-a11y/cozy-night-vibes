@@ -242,19 +242,20 @@ export function SiteHeader() {
 
         {/* Right cluster */}
         <div className="flex shrink-0 items-center gap-2">
-          <Link
-            to="/en"
+          <a
+            href={enHref}
             className="inline-flex items-center gap-1 rounded-md border border-border px-2.5 py-1.5 text-xs font-semibold text-primary hover:bg-secondary"
             aria-label="English version"
+            hrefLang="en"
           >
             EN
-          </Link>
+          </a>
           <a
-            href="tel:+97299582211"
+            href={PHONE_TEL}
             className="hidden items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-secondary md:inline-flex"
           >
             <Phone className="h-4 w-4" aria-hidden />
-            09-9582211
+            {PHONE_DISPLAY}
           </a>
           <a
             href={WHATSAPP_URL}
@@ -267,7 +268,7 @@ export function SiteHeader() {
           </a>
 
           {/* Mobile menu toggle */}
-          <MobileMenu />
+          <MobileMenu enHref={enHref} />
         </div>
       </div>
       </header>
