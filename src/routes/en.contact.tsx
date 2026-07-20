@@ -35,7 +35,7 @@ function ContactEn() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hello, my name is ${name}${company ? ` from ${company}` : ""}. I'm interested in: ${service || "a consultation"}. ${message}`;
-    window.open(`https://wa.me/972545207207?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/972546688681?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
