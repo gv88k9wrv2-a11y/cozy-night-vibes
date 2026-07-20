@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import {
   Phone,
   MessageCircle,
@@ -13,10 +13,29 @@ import {
   FileSearch,
   FileSpreadsheet,
   Plane,
+  Mail,
 } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/972545207207?text=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20-%20%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99%20%D7%95%D7%A9%D7%95%D7%AA";
+  "https://wa.me/972546688681?text=" +
+  encodeURIComponent("פנייה מהאתר - נמרודי ושות");
+
+const PHONE_TEL = "tel:099582211";
+const PHONE_DISPLAY = "09-9582211";
+const WHATSAPP_DISPLAY = "054-6688681";
+const EMAIL = "office@nimrodi.co.il";
+const ADDRESS_HE = "גלגלי הפלדה 16, הרצליה פיתוח";
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("גלגלי הפלדה 16, הרצליה פיתוח");
+
+/** Map current Hebrew path → English equivalent. */
+function toEnglishPath(pathname: string): string {
+  if (!pathname || pathname === "/") return "/en";
+  if (pathname.startsWith("/en")) return pathname;
+  if (pathname.startsWith("/blog")) return "/en";
+  return `/en${pathname}`;
+}
 
 const MAIN_LINKS = [
   { to: "/", label: "בית" },
