@@ -48,14 +48,14 @@ const FAQS = [
 export const Route = createFileRoute("/en/")({
   head: () => ({
     meta: [
-      { title: "Nimrodi & Co. CPA — Herzliya Pituach | Companies, Startups, Freelancers" },
+      { title: "Nimrodi & Co. CPA – Leading CPA Firm in Herzliya Pituach for Startups & Foreign Companies" },
       {
         name: "description",
         content:
-          "Boutique CPA firm in Herzliya Pituach, Israel. Over 25 years of experience: audit, tax advisory, bookkeeping, payroll and fundraising support. Free introductory consultation.",
+          "Premium boutique CPA firm in Herzliya Pituach. Specializing in high-growth startup engineering, international tax compliance, fractional CFO services, and complex crypto taxation.",
       },
-      { property: "og:title", content: "Nimrodi & Co. CPA — Herzliya Pituach" },
-      { property: "og:description", content: "Boutique CPA firm with 25+ years — accounting, tax and financial management for companies, startups and freelancers." },
+      { property: "og:title", content: "Nimrodi & Co. CPA – Leading CPA Firm in Herzliya Pituach for Startups & Foreign Companies" },
+      { property: "og:description", content: "Premium boutique CPA firm in Herzliya Pituach. Specializing in high-growth startup engineering, international tax compliance, fractional CFO services, and complex crypto taxation." },
       { property: "og:url", content: `${BASE}/en` },
       { property: "og:image", content: `${BASE}/og-image.jpg` },
       { property: "og:image:width", content: "1200" },

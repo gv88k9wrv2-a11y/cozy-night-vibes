@@ -9,6 +9,7 @@ import {
   WHATSAPP_URL_EN,
 } from "./site-chrome-en";
 import { LeadForm } from "./lead-form";
+import { ScrollToTop } from "./scroll-to-top";
 
 export type ServiceFAQ = { q: string; a: string };
 
@@ -165,6 +166,7 @@ export function ServiceLandingEn({
       <LeadForm lang="en" />
       <SiteFooterEn />
       <FloatingWhatsAppEn />
+      <ScrollToTop lang="en" />
     </div>
   );
 }

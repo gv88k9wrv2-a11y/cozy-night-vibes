@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -12,21 +13,31 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+// Replace with your GA4 Measurement ID (e.g. "G-XXXXXXXXXX") to enable analytics.
+const GA4_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_ENABLED = GA4_MEASUREMENT_ID.startsWith("G-") && !GA4_MEASUREMENT_ID.includes("XXXX");
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4" dir="rtl">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">הדף לא נמצא</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          הדף שחיפשת אינו קיים או שהוסר.
+        <p className="text-sm font-semibold uppercase tracking-widest text-gold">404</p>
+        <h1 className="mt-3 font-display text-4xl font-bold text-primary">עמוד זה אינו קיים</h1>
+        <p className="mt-3 text-sm text-muted-foreground">
+          ייתכן שהקישור השתנה או שהעמוד הוסר. אפשר לחזור לדף הבית או לעבור לאחד משירותי הליבה שלנו.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-md bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             חזרה לדף הבית
+          </Link>
+          <Link
+            to="/services"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-md border border-input bg-background px-5 py-2 text-sm font-medium text-foreground hover:bg-accent"
+          >
+            לסקירת השירותים
           </Link>
         </div>
       </div>
@@ -132,12 +143,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "נמרודי ושות׳ – רואי חשבון" },
       { property: "og:locale", content: "he_IL" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "נמרודי ושות׳ – רואי חשבון בהרצליה | ליווי חברות, סטארטאפים ועצמאים" },
-      { property: "og:title", content: "נמרודי ושות׳ – רואי חשבון בהרצליה | ליווי חברות, סטארטאפים ועצמאים" },
-      { name: "twitter:title", content: "נמרודי ושות׳ – רואי חשבון בהרצליה | ליווי חברות, סטארטאפים ועצמאים" },
-      { name: "description", content: "משרד רואי חשבון בוטיק בהרצליה פיתוח. מעל 25 שנות ניסיון בליווי חברות, סטארטאפים, עצמאים ופרילנסרים – ביקורת, דיווח, ייעוץ מס וגיוסי הון. פגישת ייעוץ ראשונה ללא התחייבות." },
-      { property: "og:description", content: "משרד רואי חשבון בוטיק בהרצליה פיתוח. מעל 25 שנות ניסיון בליווי חברות, סטארטאפים, עצמאים ופרילנסרים – ביקורת, דיווח, ייעוץ מס וגיוסי הון. פגישת ייעוץ ראשונה ללא התחייבות." },
-      { name: "twitter:description", content: "משרד רואי חשבון בוטיק בהרצליה פיתוח. מעל 25 שנות ניסיון בליווי חברות, סטארטאפים, עצמאים ופרילנסרים – ביקורת, דיווח, ייעוץ מס וגיוסי הון. פגישת ייעוץ ראשונה ללא התחייבות." },
+      { title: "נמרודי ושות׳ – משרד רואי חשבון בהרצליה פיתוח לסטארטאפים וחברות זרות" },
+      { property: "og:title", content: "נמרודי ושות׳ – משרד רואי חשבון בהרצליה פיתוח לסטארטאפים וחברות זרות" },
+      { name: "twitter:title", content: "נמרודי ושות׳ – משרד רואי חשבון בהרצליה פיתוח לסטארטאפים וחברות זרות" },
+      { name: "description", content: "משרד רואי חשבון בוטיק מוביל בהרצליה פיתוח. מתמחים במיסוי סטארטאפים, חברות זרות, ניהול כספים CFO, ציות מס קריפטו מורכב וגילוי מרצון." },
+      { property: "og:description", content: "משרד רואי חשבון בוטיק מוביל בהרצליה פיתוח. מתמחים במיסוי סטארטאפים, חברות זרות, ניהול כספים CFO, ציות מס קריפטו מורכב וגילוי מרצון." },
+      { name: "twitter:description", content: "משרד רואי חשבון בוטיק מוביל בהרצליה פיתוח. מתמחים במיסוי סטארטאפים, חברות זרות, ניהול כספים CFO, ציות מס קריפטו מורכב וגילוי מרצון." },
       { property: "og:image", content: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/og-image.jpg" },
       { name: "twitter:image", content: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/og-image.jpg" },
     ],
@@ -160,6 +171,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify(WEBSITE_JSONLD),
       },
+      ...(GA_ENABLED
+        ? [
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`,
+              async: true,
+            },
+            {
+              children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4_MEASUREMENT_ID}',{send_page_view:false});`,
+            },
+          ]
+        : []),
     ],
   }),
   shellComponent: RootShell,
@@ -184,6 +206,20 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (!GA_ENABLED || typeof window === "undefined") return;
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+    const page_path = window.location.pathname + window.location.search;
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: "page_view", page_path, page_title: document.title });
+    w.gtag?.("event", "page_view", {
+      page_path,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
