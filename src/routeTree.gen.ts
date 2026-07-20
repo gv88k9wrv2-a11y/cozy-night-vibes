@@ -14,6 +14,7 @@ import { Route as TaxConsultingRouteImport } from './routes/tax-consulting'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PayrollRouteImport } from './routes/payroll'
+import { Route as FractionalCfoRouteImport } from './routes/fractional-cfo'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as CpaStartupsRouteImport } from './routes/cpa-startups'
@@ -33,6 +34,7 @@ import { Route as EnTeamRouteImport } from './routes/en.team'
 import { Route as EnTaxConsultingRouteImport } from './routes/en.tax-consulting'
 import { Route as EnServicesRouteImport } from './routes/en.services'
 import { Route as EnPayrollRouteImport } from './routes/en.payroll'
+import { Route as EnFractionalCfoRouteImport } from './routes/en.fractional-cfo'
 import { Route as EnFaqRouteImport } from './routes/en.faq'
 import { Route as EnCpaStartupsRouteImport } from './routes/en.cpa-startups'
 import { Route as EnCpaInternationalRouteImport } from './routes/en.cpa-international'
@@ -69,6 +71,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const PayrollRoute = PayrollRouteImport.update({
   id: '/payroll',
   path: '/payroll',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FractionalCfoRoute = FractionalCfoRouteImport.update({
+  id: '/fractional-cfo',
+  path: '/fractional-cfo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -166,6 +173,11 @@ const EnPayrollRoute = EnPayrollRouteImport.update({
   path: '/payroll',
   getParentRoute: () => EnRoute,
 } as any)
+const EnFractionalCfoRoute = EnFractionalCfoRouteImport.update({
+  id: '/fractional-cfo',
+  path: '/fractional-cfo',
+  getParentRoute: () => EnRoute,
+} as any)
 const EnFaqRoute = EnFaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -242,6 +254,7 @@ export interface FileRoutesByFullPath {
   '/cpa-startups': typeof CpaStartupsRoute
   '/en': typeof EnRouteWithChildren
   '/faq': typeof FaqRoute
+  '/fractional-cfo': typeof FractionalCfoRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -259,6 +272,7 @@ export interface FileRoutesByFullPath {
   '/en/cpa-international': typeof EnCpaInternationalRoute
   '/en/cpa-startups': typeof EnCpaStartupsRoute
   '/en/faq': typeof EnFaqRoute
+  '/en/fractional-cfo': typeof EnFractionalCfoRoute
   '/en/payroll': typeof EnPayrollRoute
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
@@ -279,6 +293,7 @@ export interface FileRoutesByTo {
   '/cpa-international': typeof CpaInternationalRoute
   '/cpa-startups': typeof CpaStartupsRoute
   '/faq': typeof FaqRoute
+  '/fractional-cfo': typeof FractionalCfoRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -296,6 +311,7 @@ export interface FileRoutesByTo {
   '/en/cpa-international': typeof EnCpaInternationalRoute
   '/en/cpa-startups': typeof EnCpaStartupsRoute
   '/en/faq': typeof EnFaqRoute
+  '/en/fractional-cfo': typeof EnFractionalCfoRoute
   '/en/payroll': typeof EnPayrollRoute
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
@@ -318,6 +334,7 @@ export interface FileRoutesById {
   '/cpa-startups': typeof CpaStartupsRoute
   '/en': typeof EnRouteWithChildren
   '/faq': typeof FaqRoute
+  '/fractional-cfo': typeof FractionalCfoRoute
   '/payroll': typeof PayrollRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -335,6 +352,7 @@ export interface FileRoutesById {
   '/en/cpa-international': typeof EnCpaInternationalRoute
   '/en/cpa-startups': typeof EnCpaStartupsRoute
   '/en/faq': typeof EnFaqRoute
+  '/en/fractional-cfo': typeof EnFractionalCfoRoute
   '/en/payroll': typeof EnPayrollRoute
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
@@ -358,6 +376,7 @@ export interface FileRouteTypes {
     | '/cpa-startups'
     | '/en'
     | '/faq'
+    | '/fractional-cfo'
     | '/payroll'
     | '/services'
     | '/sitemap.xml'
@@ -375,6 +394,7 @@ export interface FileRouteTypes {
     | '/en/cpa-international'
     | '/en/cpa-startups'
     | '/en/faq'
+    | '/en/fractional-cfo'
     | '/en/payroll'
     | '/en/services'
     | '/en/tax-consulting'
@@ -395,6 +415,7 @@ export interface FileRouteTypes {
     | '/cpa-international'
     | '/cpa-startups'
     | '/faq'
+    | '/fractional-cfo'
     | '/payroll'
     | '/services'
     | '/sitemap.xml'
@@ -412,6 +433,7 @@ export interface FileRouteTypes {
     | '/en/cpa-international'
     | '/en/cpa-startups'
     | '/en/faq'
+    | '/en/fractional-cfo'
     | '/en/payroll'
     | '/en/services'
     | '/en/tax-consulting'
@@ -433,6 +455,7 @@ export interface FileRouteTypes {
     | '/cpa-startups'
     | '/en'
     | '/faq'
+    | '/fractional-cfo'
     | '/payroll'
     | '/services'
     | '/sitemap.xml'
@@ -450,6 +473,7 @@ export interface FileRouteTypes {
     | '/en/cpa-international'
     | '/en/cpa-startups'
     | '/en/faq'
+    | '/en/fractional-cfo'
     | '/en/payroll'
     | '/en/services'
     | '/en/tax-consulting'
@@ -472,6 +496,7 @@ export interface RootRouteChildren {
   CpaStartupsRoute: typeof CpaStartupsRoute
   EnRoute: typeof EnRouteWithChildren
   FaqRoute: typeof FaqRoute
+  FractionalCfoRoute: typeof FractionalCfoRoute
   PayrollRoute: typeof PayrollRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -514,6 +539,13 @@ declare module '@tanstack/react-router' {
       path: '/payroll'
       fullPath: '/payroll'
       preLoaderRoute: typeof PayrollRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fractional-cfo': {
+      id: '/fractional-cfo'
+      path: '/fractional-cfo'
+      fullPath: '/fractional-cfo'
+      preLoaderRoute: typeof FractionalCfoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -649,6 +681,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnPayrollRouteImport
       parentRoute: typeof EnRoute
     }
+    '/en/fractional-cfo': {
+      id: '/en/fractional-cfo'
+      path: '/fractional-cfo'
+      fullPath: '/en/fractional-cfo'
+      preLoaderRoute: typeof EnFractionalCfoRouteImport
+      parentRoute: typeof EnRoute
+    }
     '/en/faq': {
       id: '/en/faq'
       path: '/faq'
@@ -758,6 +797,7 @@ interface EnRouteChildren {
   EnCpaInternationalRoute: typeof EnCpaInternationalRoute
   EnCpaStartupsRoute: typeof EnCpaStartupsRoute
   EnFaqRoute: typeof EnFaqRoute
+  EnFractionalCfoRoute: typeof EnFractionalCfoRoute
   EnPayrollRoute: typeof EnPayrollRoute
   EnServicesRoute: typeof EnServicesRoute
   EnTaxConsultingRoute: typeof EnTaxConsultingRoute
@@ -777,6 +817,7 @@ const EnRouteChildren: EnRouteChildren = {
   EnCpaInternationalRoute: EnCpaInternationalRoute,
   EnCpaStartupsRoute: EnCpaStartupsRoute,
   EnFaqRoute: EnFaqRoute,
+  EnFractionalCfoRoute: EnFractionalCfoRoute,
   EnPayrollRoute: EnPayrollRoute,
   EnServicesRoute: EnServicesRoute,
   EnTaxConsultingRoute: EnTaxConsultingRoute,
@@ -801,6 +842,7 @@ const rootRouteChildren: RootRouteChildren = {
   CpaStartupsRoute: CpaStartupsRoute,
   EnRoute: EnRouteWithChildren,
   FaqRoute: FaqRoute,
+  FractionalCfoRoute: FractionalCfoRoute,
   PayrollRoute: PayrollRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
