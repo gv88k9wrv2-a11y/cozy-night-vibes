@@ -107,7 +107,7 @@ function ContactPage() {
               const message = String(data.get("message") || "");
               const text = `פנייה מהאתר\nשם: ${name}\nטלפון: ${phone}\nהודעה: ${message}`;
               window.open(
-                `https://wa.me/972545207207?text=${encodeURIComponent(text)}`,
+                `https://wa.me/972546688681?text=${encodeURIComponent(text)}`,
                 "_blank",
                 "noopener",
               );
