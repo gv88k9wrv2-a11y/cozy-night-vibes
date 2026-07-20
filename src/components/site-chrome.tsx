@@ -276,7 +276,7 @@ export function SiteHeader() {
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ enHref }: { enHref: string }) {
   return (
     <details className="group relative lg:hidden">
       <summary
