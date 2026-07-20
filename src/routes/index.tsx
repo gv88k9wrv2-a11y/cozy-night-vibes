@@ -191,6 +191,8 @@ function HomePage() {
         </div>
       </section>
 
+      <ClientLogosStrip lang="he" />
+
       {/* SERVICES */}
       <section id="services" className="py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
