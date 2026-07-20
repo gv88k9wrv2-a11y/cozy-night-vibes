@@ -41,7 +41,7 @@ const FAQS = [
   },
   {
     q: "Do you handle foreign income, crypto and relocation?",
-    a: "Yes. We have a dedicated international tax practice — foreign account reporting (FBAR/FATCA counterparts), crypto taxation, residency severance and advisory for new immigrants and returning residents.",
+    a: "Yes. We hold specialized expertise in cryptocurrency and digital asset taxation, navigating complex Web3 transactions, facilitating the repatriation of crypto funds into Israeli banks, and filing tailored compliance reports with the Tax Authority. We also handle international tax advisory, FBAR/FATCA/CRS reporting, residency severance and advisory for new immigrants and returning residents.",
   },
 ];
 
@@ -149,13 +149,20 @@ function HomeEn() {
                 { to: "/en/cpa-startups", icon: Building2, title: "Startups & Tech", desc: "Fundraising, ESOP (section 102), Israeli-Delaware Flip, preferred tech enterprise status." },
                 { to: "/en/cpa-freelancers", icon: Briefcase, title: "Freelancers & Self-Employed", desc: "File openings, VAT reporting, annual returns, capital declarations." },
                 { to: "/en/cpa-foreign-companies", icon: Globe2, title: "Foreign Companies", desc: "Subsidiary vs. branch, banking, Transfer Pricing, ongoing compliance." },
-                { to: "/en/tax-consulting", icon: Award, title: "Tax Advisory", desc: "Planning, Pre-Ruling with the ITA, appeals and objections." },
+                { to: "/en/tax-consulting", icon: Award, title: "Tax Advisory & Special Reports", desc: "Specialized expertise in cryptocurrency and digital asset taxation, navigating complex Web3 transactions, facilitating the repatriation of crypto funds into Israeli banks, and filing tailored compliance reports with the Tax Authority. Plus Pre-Rulings, appeals and objections.", badge: "Crypto & Web3 Expert" },
                 { to: "/en/audit", icon: TrendingUp, title: "Audit & Assurance", desc: "Israeli GAAP & IFRS, statutory audits, due diligence." },
                 { to: "/en/cpa-international", icon: Users, title: "International Tax", desc: "Relocation, returning residents, olim benefits, treaties." },
               ].map((s) => (
                 <Link key={s.to} to={s.to} className="group rounded-xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:border-gold hover:shadow-xl">
-                  <div className="grid h-11 w-11 place-items-center rounded-lg bg-secondary text-primary group-hover:bg-gold/15 group-hover:text-gold">
-                    <s.icon className="h-5 w-5" aria-hidden />
+                  <div className="flex items-center justify-between">
+                    <div className="grid h-11 w-11 place-items-center rounded-lg bg-secondary text-primary group-hover:bg-gold/15 group-hover:text-gold">
+                      <s.icon className="h-5 w-5" aria-hidden />
+                    </div>
+                    {"badge" in s && s.badge && (
+                      <span className="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold">
+                        ✦ {s.badge}
+                      </span>
+                    )}
                   </div>
                   <h3 className="mt-4 font-display text-xl font-bold text-primary">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
