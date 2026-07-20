@@ -165,6 +165,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify(WEBSITE_JSONLD),
       },
+      ...(GA_ENABLED
+        ? [
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`,
+              async: true,
+            },
+            {
+              children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA4_MEASUREMENT_ID}',{send_page_view:false});`,
+            },
+          ]
+        : []),
     ],
   }),
   shellComponent: RootShell,
@@ -189,6 +200,20 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  useEffect(() => {
+    if (!GA_ENABLED || typeof window === "undefined") return;
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
+    const page_path = window.location.pathname + window.location.search;
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: "page_view", page_path, page_title: document.title });
+    w.gtag?.("event", "page_view", {
+      page_path,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
