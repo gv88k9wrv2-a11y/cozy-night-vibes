@@ -321,6 +321,8 @@ function HomePage() {
       </section>
 
       <TestimonialsSection />
+      <ExecutiveTestimonials lang="he" />
+
 
       {/* FAQ */}
       <section id="faq" className="py-20">
