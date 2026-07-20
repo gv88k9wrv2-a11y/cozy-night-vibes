@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WHATSAPP_URL } from "../components/site-chrome";
 import { ProcessSection, TestimonialsSection, WhyUsSection } from "../components/home-sections";
+import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-proof";
 import heroImage from "../assets/hero-office.jpg";
 
 const FAQS = [
