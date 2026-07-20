@@ -1,159 +1,163 @@
-import { Quote } from "lucide-react";
+import { Award, CalendarDays, ExternalLink, Globe2, Star, UserCheck } from "lucide-react";
 
 type Lang = "he" | "en";
 
 const COPY = {
   he: {
-    logosTitle: "חברות וסטארט-אפים שצומחים איתנו",
-    logosSub: "לקוחות בתחומי הייטק, פינטק, ביומד, ריטייל וייצור – בישראל ובחו״ל.",
-    testTitle: "מנהלים בכירים ממליצים",
-    testEyebrow: "עדויות מנכ״לים ו-CFOs",
+    credEyebrow: "אמינות מוכחת",
+    credTitle: "משרד ותיק עם רקורד אמיתי",
+    credSub: "המספרים והעובדות מדברים בעד עצמם – ללא הבטחות שיווקיות.",
+    facts: [
+      { icon: CalendarDays, label: "פעילים משנת 2000" },
+      { icon: Award, label: "מעל 25 שנות ניסיון מקצועי" },
+      { icon: UserCheck, label: "בהובלת רו״ח שלמה נמרודי" },
+      { icon: Globe2, label: "ליווי חברות, סטארטאפים ופעילות בינלאומית" },
+    ],
+    reviewsEyebrow: "חוות דעת לקוחות",
+    reviewsTitle: "מה לקוחות שלנו אומרים",
+    reviewsSub:
+      "אנו מאמינים בשקיפות מלאה. במקום ציטוטים באתר, אנחנו מפנים אתכם ישירות למקורות הציבוריים שבהם מפורסמות חוות דעת אמיתיות על המשרד.",
+    readOn: "קראו חוות דעת ב-",
+    openSource: "פתיחת מקור המקור",
+    ctaAll: "לצפייה בכל חוות הדעת",
+    disclaimer:
+      "מוצגים כאן קישורים למקורות ציבוריים בלבד. כל חוות דעת נכתבה על ידי הכותב במקור החיצוני.",
   },
   en: {
-    logosTitle: "Empowering High-Growth Ventures & Enterprises",
-    logosSub: "Trusted by tech, fintech, biomed, retail and manufacturing companies in Israel and abroad.",
-    testTitle: "Executive Testimonials",
-    testEyebrow: "From CEOs & Global CFOs",
+    credEyebrow: "Proven Credibility",
+    credTitle: "An established firm with a real track record",
+    credSub: "Facts, not marketing claims.",
+    facts: [
+      { icon: CalendarDays, label: "Operating since 2000" },
+      { icon: Award, label: "25+ years of professional experience" },
+      { icon: UserCheck, label: "Led by CPA Shlomo Nimrodi" },
+      { icon: Globe2, label: "Serving companies, startups & international clients" },
+    ],
+    reviewsEyebrow: "Client Reviews",
+    reviewsTitle: "What Our Clients Say",
+    reviewsSub:
+      "We believe in full transparency. Instead of quoting reviews on-site, we link you directly to the public platforms where authentic client reviews of the firm are published.",
+    readOn: "Read reviews on ",
+    openSource: "Open original source",
+    ctaAll: "Read more reviews",
+    disclaimer:
+      "Only links to public sources are shown. Each review was written by its author on the external platform.",
   },
 } as const;
 
-const LOGOS = [
-  "Northwind",
-  "Helios AI",
-  "Meridian Bio",
-  "Kestrel Labs",
-  "Aurora Fintech",
-  "Vertex Cloud",
-  "Lumen Health",
-  "Arcadia Ventures",
-];
-
-const TESTIMONIALS: Record<Lang, { quote: string; name: string; role: string }[]> = {
-  en: [
-    {
-      quote:
-        "Partner-level responsiveness we didn't get at a Big Four. Shlomo and his team closed our Series B audit and Delaware Flip in parallel — on time and without a single surprise.",
-      name: "Daniel R.",
-      role: "CEO, B2B SaaS (Series B)",
+const REVIEW_SOURCES = [
+  {
+    name: "Easy.co.il",
+    href: "https://easy.co.il/page/2735913",
+    description: {
+      he: "פרופיל המשרד ודירוגי לקוחות באתר Easy.",
+      en: "Firm profile and client ratings on Easy.",
     },
-    {
-      quote:
-        "Cross-border tax strategy that actually saved us millions. Their Section 85A and IP-migration work stood up to two rounds of institutional DD without a scratch.",
-      name: "Anna K.",
-      role: "Global CFO, Fintech Group",
+  },
+  {
+    name: "D.co.il (דפי זהב)",
+    href: "https://www.d.co.il/reviews-76157350-c46140-p1/",
+    description: {
+      he: "חוות דעת מלקוחות בפלטפורמת דפי זהב.",
+      en: "Customer reviews on the Dapei Zahav directory.",
     },
-    {
-      quote:
-        "The most responsive advisors we've ever worked with. Answers on WhatsApp within the hour, board-grade memos within the day.",
-      name: "Michael T.",
-      role: "Founder & CEO, DeepTech Startup",
+  },
+  {
+    name: "B144 / T.co.il",
+    href: "https://www.t.co.il/mobile/busins/545-c:408.html",
+    description: {
+      he: "פרופיל עסקי וביקורות בפלטפורמת B144.",
+      en: "Business profile and reviews on the B144 platform.",
     },
-  ],
-  he: [
-    {
-      quote:
-        "רמת מענה של שותף בכיר – משהו שלא קיבלנו בביג פור. שלמה והצוות סגרו לנו ביקורת סבב B ו-Flip לדלאוור במקביל, בזמן, וללא הפתעה אחת.",
-      name: "דניאל ר.",
-      role: "מנכ״ל, חברת SaaS (סבב B)",
-    },
-    {
-      quote:
-        "אסטרטגיית מיסוי חוצת-גבולות שחסכה לנו מיליונים בפועל. עבודת סעיף 85א׳ והמעברי IP עמדו בשני סבבי DD מוסדיים בלי שריטה.",
-      name: "אנה ק.",
-      role: "CFO גלובלית, קבוצת פינטק",
-    },
-    {
-      quote:
-        "היועצים הכי זמינים שעבדנו איתם. מענה בוואטסאפ תוך שעה, מסמכים ברמת בורד תוך יום.",
-      name: "מיכאל ט.",
-      role: "מייסד ומנכ״ל, סטארטאפ דיפ-טק",
-    },
-  ],
-};
+  },
+] as const;
 
 export function ClientLogosStrip({ lang = "he" }: { lang?: Lang }) {
   const t = COPY[lang];
   const dir = lang === "he" ? "rtl" : "ltr";
-  const items = [...LOGOS, ...LOGOS];
   return (
-    <section dir={dir} aria-label={t.logosTitle} className="border-y border-border/60 bg-background py-14">
+    <section dir={dir} aria-label={t.credTitle} className="border-y border-border/60 bg-background py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center">
-          <div className="text-xs font-semibold uppercase tracking-widest text-gold">
-            {t.logosTitle}
-          </div>
-          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">{t.logosSub}</p>
+          <div className="text-xs font-semibold uppercase tracking-widest text-gold">{t.credEyebrow}</div>
+          <h2 className="mt-2 font-display text-2xl font-bold text-primary sm:text-3xl">{t.credTitle}</h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground">{t.credSub}</p>
         </div>
 
-        <div
-          className="group relative mt-8 overflow-hidden"
-          style={{
-            maskImage:
-              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          }}
-        >
-          <ul className="flex w-max animate-[logo-scroll_38s_linear_infinite] items-center gap-12 group-hover:[animation-play-state:paused]">
-            {items.map((name, i) => (
-              <li
-                key={`${name}-${i}`}
-                className="flex h-12 shrink-0 items-center justify-center px-2 font-display text-lg font-semibold uppercase tracking-[0.18em] text-muted-foreground/70 opacity-70 grayscale transition hover:opacity-100 hover:text-primary hover:grayscale-0"
-                aria-hidden={i >= LOGOS.length ? true : undefined}
-              >
-                {name}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {t.facts.map((f, i) => (
+            <li
+              key={i}
+              className="flex items-start gap-3 rounded-xl border border-border bg-card p-5 shadow-sm"
+            >
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-gold/10 text-gold">
+                <f.icon className="h-5 w-5" aria-hidden />
+              </span>
+              <span className="text-sm font-medium leading-relaxed text-foreground">{f.label}</span>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      <style>{`
-        @keyframes logo-scroll {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
     </section>
   );
 }
 
 export function ExecutiveTestimonials({ lang = "he" }: { lang?: Lang }) {
   const t = COPY[lang];
-  const items = TESTIMONIALS[lang];
   const dir = lang === "he" ? "rtl" : "ltr";
+  const primary = REVIEW_SOURCES[0];
+
   return (
     <section dir={dir} className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center">
-          <div className="text-xs font-semibold uppercase tracking-widest text-gold">
-            {t.testEyebrow}
-          </div>
-          <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">
-            {t.testTitle}
-          </h2>
+          <div className="text-xs font-semibold uppercase tracking-widest text-gold">{t.reviewsEyebrow}</div>
+          <h2 className="mt-2 font-display text-3xl font-bold text-primary sm:text-4xl">{t.reviewsTitle}</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t.reviewsSub}</p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {items.map((item, i) => (
-            <figure
-              key={i}
-              className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
+          {REVIEW_SOURCES.map((src) => (
+            <article
+              key={src.href}
+              className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
             >
-              <Quote
-                className="absolute -top-3 h-9 w-9 rounded-full bg-gold p-2 text-gold-foreground shadow-md"
-                style={lang === "he" ? { right: "1.5rem" } : { left: "1.5rem" }}
-                aria-hidden
-              />
-              <blockquote className="mt-2 text-sm leading-relaxed text-foreground">
-                &ldquo;{item.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
-                <div className="font-display text-base font-semibold text-primary">{item.name}</div>
-                <div className="text-xs text-muted-foreground">{item.role}</div>
-              </figcaption>
-            </figure>
+              <div className="flex items-center gap-2 text-gold" aria-hidden>
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-primary">{src.name}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {src.description[lang]}
+              </p>
+              <a
+                href={src.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-gold"
+              >
+                {t.readOn}
+                {src.name}
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+              </a>
+            </article>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <a
+            href={primary.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold text-gold-foreground transition hover:brightness-95"
+          >
+            {t.ctaAll}
+            <ExternalLink className="h-4 w-4" aria-hidden />
+          </a>
+          <p className="max-w-xl text-center text-xs text-muted-foreground">{t.disclaimer}</p>
         </div>
       </div>
     </section>
