@@ -32,7 +32,7 @@ export const POSTS = [
   },
 ];
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "בלוג מקצועי | נמרודי ושות׳ – רואי חשבון בהרצליה" },
