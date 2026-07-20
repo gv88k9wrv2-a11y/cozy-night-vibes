@@ -44,7 +44,11 @@ export const Route = createFileRoute("/team")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:image", content: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/team" }],
+    links: [
+      { rel: "canonical", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/team" },
+      { rel: "alternate", hrefLang: "he-IL", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/team" },
+      { rel: "alternate", hrefLang: "en-US", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/en/team" }
+    ],
   }),
   component: TeamPage,
 });

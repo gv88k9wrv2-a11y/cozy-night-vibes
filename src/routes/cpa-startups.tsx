@@ -71,7 +71,11 @@ export const Route = createFileRoute("/cpa-startups")({
       { property: "og:image:height", content: "630" },
       { name: "twitter:image", content: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/cpa-startups" }],
+    links: [
+      { rel: "canonical", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/cpa-startups" },
+      { rel: "alternate", hrefLang: "he-IL", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/cpa-startups" },
+      { rel: "alternate", hrefLang: "en-US", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/en/cpa-startups" }
+    ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(buildFaqJsonLd(FAQS)) },
     ],

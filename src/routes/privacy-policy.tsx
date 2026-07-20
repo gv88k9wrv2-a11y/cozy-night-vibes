@@ -14,7 +14,11 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: "מדיניות פרטיות | נמרודי ושות׳" },
       { property: "og:description", content: "מחויבות לסודיות מלאה של פונים ולקוחות." },
     ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    links: [
+      { rel: "canonical", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/privacy-policy" },
+      { rel: "alternate", hrefLang: "he-IL", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/privacy-policy" },
+      { rel: "alternate", hrefLang: "en-US", href: "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app/en/privacy-policy" }
+    ],
   }),
   component: PrivacyPage,
 });
