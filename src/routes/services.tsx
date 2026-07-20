@@ -29,14 +29,16 @@ const LANDING_PAGES: {
   icon: LucideIcon;
   title: string;
   desc: string;
-  to: "/cpa-herzliya" | "/cpa-startups" | "/cpa-freelancers" | "/cpa-international" | "/cpa-foreign-companies";
+  to: "/cpa-herzliya" | "/cpa-startups" | "/cpa-freelancers" | "/cpa-international" | "/cpa-foreign-companies" | "/fractional-cfo";
 }[] = [
+  { icon: ChartLine, title: "Fractional CFO – ניהול כספים אסטרטגי", desc: "סמנכ״ל כספים במיקור חוץ – Burn, Runway, מודלים למשקיעים, יחסי בורד ו-DD.", to: "/fractional-cfo" },
   { icon: MapPin, title: "רואה חשבון בהרצליה", desc: "משרד מקומי בהרצליה פיתוח – ליווי אישי לחברות ועצמאים באזור השרון.", to: "/cpa-herzliya" },
   { icon: Rocket, title: "רואה חשבון לסטארטאפים", desc: "מהקמה ועד Exit – גיוסי הון, אופציות 102 ופעילות בינלאומית.", to: "/cpa-startups" },
   { icon: Briefcase, title: "עצמאים ופרילנסרים", desc: "פתיחת תיק, ניהול שוטף, דוחות שנתיים ותכנון מס אישי.", to: "/cpa-freelancers" },
   { icon: Plane, title: "רילוקיישן וייעוץ בינלאומי", desc: "עולים, תושבים חוזרים, ניתוק תושבות ומיסוי בין-מדינתי.", to: "/cpa-international" },
   { icon: Globe2, title: "חברות זרות בישראל", desc: "הקמת חברה בת או סניף, בנקים, שכר ו-Transfer Pricing.", to: "/cpa-foreign-companies" },
 ];
+
 
 function FeaturedLandingPages() {
   return (

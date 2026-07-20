@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Building2, Briefcase, Globe2, MapPin, Calculator, ReceiptText,
-  FileSearch, FileSpreadsheet, Plane, MessageCircle,
+  FileSearch, FileSpreadsheet, Plane, MessageCircle, LineChart,
 } from "lucide-react";
+
 import { FloatingWhatsAppEn, SiteFooterEn, SiteHeaderEn, WHATSAPP_URL_EN } from "../components/site-chrome-en";
 
 const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
@@ -11,12 +12,14 @@ const GROUPS = [
   {
     title: "Core Services",
     items: [
+      { to: "/en/fractional-cfo", label: "Fractional CFO", icon: LineChart, desc: "Outsourced senior CFO — Burn, Runway, VC-ready models, Board and continuous DD readiness." },
       { to: "/en/bookkeeping", label: "Bookkeeping", icon: Calculator, desc: "Priority, Xero, QuickBooks — clean books, monthly closes and management reporting." },
       { to: "/en/payroll", label: "Payroll & ESOP", icon: ReceiptText, desc: "Israeli payslips, Section 102 equity, Form 106, Form 161 and pension compliance." },
       { to: "/en/audit", label: "Audit & Assurance", icon: FileSearch, desc: "Statutory audits under Israeli GAAP and IFRS; M&A due diligence." },
       { to: "/en/tax-consulting", label: "Tax Advisory", icon: FileSpreadsheet, desc: "Tax planning, Pre-Rulings, objections and appeals with the ITA." },
     ],
   },
+
   {
     title: "By Client Type",
     items: [
