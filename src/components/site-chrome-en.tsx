@@ -237,9 +237,9 @@ function MobileMenuEn({ heHref }: { heHref: string }) {
             ))}
           </div>
           <div className="mt-4 grid grid-cols-2 gap-2 border-t border-border pt-4">
-            <Link to="/" className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-3 py-2.5 text-sm font-semibold text-primary">
+            <a href={heHref} className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-3 py-2.5 text-sm font-semibold text-primary" hrefLang="he">
               עברית
-            </Link>
+            </a>
             <a href={WHATSAPP_URL_EN} target="_blank" rel="noopener" className="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-3 py-2.5 text-sm font-semibold text-gold-foreground">
               <MessageCircle className="h-4 w-4" aria-hidden />
               WhatsApp
