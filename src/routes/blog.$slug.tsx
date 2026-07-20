@@ -68,7 +68,7 @@ const POST_CONTENT: Record<string, PostContent> = {
     title: "אופציות לעובדים בסטארטאפ – מסלול 102 שווי הוני",
     excerpt:
       "איך להעניק אופציות בצורה שממקסמת הטבות מס, אישור נאמן, ומלכודות נפוצות.",
-    date: "2026-09-20",
+    date: "2026-05-20",
     readMin: 9,
     category: "סטארטאפים",
     sections: [
