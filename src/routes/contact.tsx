@@ -106,31 +106,6 @@ function ContactPage() {
   );
 }
 
-function Field({
-  name,
-  label,
-  type = "text",
-  required,
-  className = "",
-}: {
-  name: string;
-  label: string;
-  type?: string;
-  required?: boolean;
-  className?: string;
-}) {
-  return (
-    <label className={`block ${className}`}>
-      <span className="text-sm font-medium text-foreground">{label}</span>
-      <input
-        name={name}
-        type={type}
-        required={required}
-        className="mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-gold focus:ring-2 focus:ring-gold/30"
-      />
-    </label>
-  );
-}
 
 function ContactCard({
   icon: Icon,
