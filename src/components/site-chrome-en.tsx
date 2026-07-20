@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import {
   Phone,
   MessageCircle,
@@ -16,7 +16,24 @@ import {
 } from "lucide-react";
 
 export const WHATSAPP_URL_EN =
-  "https://wa.me/972545207207?text=Hello%2C%20I%27d%20like%20a%20consultation%20from%20Nimrodi%20%26%20Co.";
+  "https://wa.me/972546688681?text=" +
+  encodeURIComponent("Inquiry from website - Nimrodi and Co");
+
+const PHONE_TEL = "tel:+97299582211";
+const PHONE_DISPLAY_EN = "+972-9-9582211";
+const WHATSAPP_DISPLAY_EN = "+972-54-6688681";
+const EMAIL = "office@nimrodi.co.il";
+const ADDRESS_EN = "16 Galgalei ha-Plada St, Herzliya Pituach";
+const MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("16 Galgalei ha-Plada St, Herzliya Pituach");
+
+/** Map current English path → Hebrew equivalent. */
+function toHebrewPath(pathname: string): string {
+  if (!pathname || pathname === "/en" || pathname === "/en/") return "/";
+  if (pathname.startsWith("/en/")) return pathname.slice(3);
+  return pathname;
+}
 
 const MAIN_LINKS = [
   { to: "/en", label: "Home" },
