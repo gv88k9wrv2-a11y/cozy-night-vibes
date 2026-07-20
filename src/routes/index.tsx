@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WHATSAPP_URL } from "../components/site-chrome";
 import { ProcessSection, TestimonialsSection, WhyUsSection } from "../components/home-sections";
+import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-proof";
 import heroImage from "../assets/hero-office.jpg";
 
 const FAQS = [
@@ -190,6 +191,8 @@ function HomePage() {
         </div>
       </section>
 
+      <ClientLogosStrip lang="he" />
+
       {/* SERVICES */}
       <section id="services" className="py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -318,6 +321,8 @@ function HomePage() {
       </section>
 
       <TestimonialsSection />
+      <ExecutiveTestimonials lang="he" />
+
 
       {/* FAQ */}
       <section id="faq" className="py-20">

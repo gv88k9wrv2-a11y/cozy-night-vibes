@@ -15,6 +15,7 @@ import {
   Plane,
   LineChart,
 } from "lucide-react";
+import { SocialIcons } from "./social-proof";
 
 
 const WHATSAPP_URL =
@@ -404,6 +405,10 @@ export function SiteFooter() {
               </a>
             </div>
           </address>
+          <div className="mt-5">
+            <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold">עקבו אחרינו</div>
+            <SocialIcons lang="he" variant="footer" />
+          </div>
         </div>
 
         <div>

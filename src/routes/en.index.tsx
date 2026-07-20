@@ -17,6 +17,7 @@ import {
   SiteHeaderEn,
   WHATSAPP_URL_EN,
 } from "../components/site-chrome-en";
+import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-proof";
 import heroImage from "../assets/hero-office.jpg";
 
 const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
@@ -134,6 +135,8 @@ function HomeEn() {
           </div>
         </section>
 
+        <ClientLogosStrip lang="en" />
+
         {/* Services */}
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -197,6 +200,8 @@ function HomeEn() {
             </div>
           </div>
         </section>
+
+        <ExecutiveTestimonials lang="en" />
 
         {/* FAQ */}
         <section className="py-20">

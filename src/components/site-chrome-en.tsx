@@ -15,6 +15,7 @@ import {
   Plane,
   LineChart,
 } from "lucide-react";
+import { SocialIcons } from "./social-proof";
 
 
 export const WHATSAPP_URL_EN =
@@ -271,6 +272,10 @@ export function SiteFooterEn() {
             <div><a href={`mailto:${EMAIL}`} className="hover:text-gold">{EMAIL}</a></div>
             <div><a href={MAPS_URL} target="_blank" rel="noopener" className="hover:text-gold">{ADDRESS_EN}</a></div>
           </address>
+          <div className="mt-5">
+            <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold">Follow us</div>
+            <SocialIcons lang="en" variant="footer" />
+          </div>
         </div>
         <div>
           <div className="mb-3 text-sm font-semibold uppercase tracking-wider text-gold">Navigation</div>
