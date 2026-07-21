@@ -100,7 +100,8 @@ export function ServiceLandingEn({
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  className="h-64 w-full object-cover sm:h-80 md:h-96"
+                  decoding="async"
+                  className="h-auto w-full object-cover"
                 />
               </div>
             ) : null}
