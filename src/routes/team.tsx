@@ -79,11 +79,12 @@ function TeamPage() {
           <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
             <img
               src={teamPhoto}
-              alt="צוות משרד רואי חשבון נמרודי ושות׳"
+              alt="צוות משרד רואי חשבון נמרודי ושות׳ במשרדי המשרד בהרצליה פיתוח"
               width={1024}
               height={1024}
               loading="lazy"
-              className="h-72 w-full object-cover sm:h-96"
+              decoding="async"
+              className="h-auto w-full object-cover"
             />
           </div>
         </div>
