@@ -21,6 +21,14 @@ import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-pr
 import heroImage from "../assets/hero-office.webp";
 
 const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
+const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/jxWz9287qp3QRVFg8";
+
+const HIGHLIGHTS = [
+  { icon: Award, num: "25+", label: "Years of experience" },
+  { icon: Star, num: "5.0", label: "Google rating", href: GOOGLE_REVIEWS_URL },
+  { icon: Users, num: "80+", label: "Client reviews", href: GOOGLE_REVIEWS_URL },
+  { icon: Handshake, num: "100%", label: "Personal attention and transparency" },
+];
 
 const FAQS = [
   {
