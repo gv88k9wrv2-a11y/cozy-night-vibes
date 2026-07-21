@@ -247,7 +247,7 @@ function BlogPostPage() {
 
         {heroImg ? (
           <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-xl">
-            <img src={heroImg} alt={post.title} width={1024} height={1024} loading="lazy" className="h-64 w-full object-cover sm:h-96" />
+            <img src={heroImg} alt={`תמונה נלווית למאמר: ${post.title}`} width={1024} height={1024} loading="lazy" decoding="async" className="h-auto w-full object-cover" />
           </div>
         ) : null}
 
