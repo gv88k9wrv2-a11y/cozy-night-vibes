@@ -144,6 +144,9 @@ function HomePage() {
             alt="משרד רואי חשבון נמרודי ושות׳ בהרצליה פיתוח"
             width={1920}
             height={1280}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-primary/95 via-primary/85 to-primary/60" />
