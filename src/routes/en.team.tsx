@@ -52,7 +52,7 @@ function TeamEn() {
       <section className="border-b border-border/60">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
-            <img src={heroImg} alt="Nimrodi & Co. accounting team" width={1024} height={1024} loading="lazy" className="h-64 w-full object-cover sm:h-80" />
+            <img src={heroImg} alt="Nimrodi & Co. CPA team at the Herzliya Pituach offices" width={1024} height={1024} loading="lazy" decoding="async" className="h-auto w-full object-cover" />
           </div>
         </div>
       </section>
