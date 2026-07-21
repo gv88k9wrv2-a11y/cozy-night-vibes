@@ -94,7 +94,7 @@ function HomeEn() {
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-border/60">
           <div className="absolute inset-0">
-            <img src={heroImage} alt="Herzliya Pituach skyline" className="h-full w-full object-cover opacity-25" />
+            <img src={heroImage} alt="Nimrodi & Co. CPA offices in Herzliya Pituach, Israel" width={1920} height={1280} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover opacity-25" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/85 to-background" />
           </div>
           <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 sm:py-32">
