@@ -5,9 +5,11 @@ import {
   Building2,
   CheckCircle2,
   Globe2,
+  Handshake,
   MessageCircle,
   Phone,
   Sparkles,
+  Star,
   TrendingUp,
   Users,
 } from "lucide-react";
