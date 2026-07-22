@@ -47,7 +47,7 @@ export const Route = createFileRoute("/en/fractional-cfo")({
       {
         name: "description",
         content:
-          "Fractional CFO services from Nimrodi & Co. — strategic corporate finance, Burn Rate and Runway management, investor-grade financial models, Board relations, VC representation and continuous M&A / DD readiness for Israeli and foreign companies.",
+          "Fractional CFO services: strategic finance, Burn Rate and Runway, investor-grade models, Board relations and M&A readiness. Book a consultation.",
       },
       { property: "og:title", content: "Fractional CFO — Nimrodi & Co." },
       {
