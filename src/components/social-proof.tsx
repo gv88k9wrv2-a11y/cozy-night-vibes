@@ -1,4 +1,4 @@
-import { Award, CalendarDays, ExternalLink, Globe2, Star, UserCheck } from "lucide-react";
+import { CalendarDays, ExternalLink, Globe2, Star, UserCheck } from "lucide-react";
 
 type Lang = "he" | "en";
 
