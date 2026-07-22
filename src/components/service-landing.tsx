@@ -11,7 +11,7 @@ import {
 import { LeadForm } from "./lead-form";
 import { ScrollToTop } from "./scroll-to-top";
 
-export type ServiceFAQ = { q: string; a: React.ReactNode };
+export type ServiceFAQ = { q: string; a: string };
 
 export type ServiceLandingProps = {
   eyebrow: string;
