@@ -110,7 +110,7 @@ export const Route = createFileRoute("/en/cpa-startups")({
             "Transaction structure: Direct Sale, Tender Offer, trustee-led aggregation",
             "Escrow, holdback and Clawback provisions — accounting and tax treatment",
             "Pre-Ruling with the ITA for material transactions",
-            "Employee reporting (Form 106) and trustee coordination",
+            "Employee reporting (Form 106 – Annual Tax Statement) and trustee coordination",
             "Founder-level planning: tax spreading, returning-resident relief, spousal split",
           ],
         },
