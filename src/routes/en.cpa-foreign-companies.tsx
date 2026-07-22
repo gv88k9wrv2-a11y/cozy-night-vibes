@@ -18,7 +18,7 @@ export const Route = createFileRoute("/en/cpa-foreign-companies")({
   head: () => ({
     meta: [
       { title: "Foreign Companies in Israel — Subsidiary, Branch, TP & IP | Nimrodi & Co." },
-      { name: "description", content: "Full local support for international companies in Israel: subsidiary or branch setup, banking KYC, Israeli payroll, Transfer Pricing under Section 85A, and cross-border IP structuring under OECD BEPS." },
+      { name: "description", content: "Israeli CPA for foreign companies: subsidiary or branch setup, banking KYC, payroll, Transfer Pricing and cross-border IP. Book a consultation." },
       { property: "og:title", content: "Foreign Companies in Israel — Nimrodi & Co." },
       { property: "og:description", content: "Comprehensive onboarding for international companies entering the Israeli market — entity, payroll, TP and IP." },
       { property: "og:url", content: `${BASE}/en/cpa-foreign-companies` },
