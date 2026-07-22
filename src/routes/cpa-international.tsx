@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane } from "lucide-react";
 import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 import heroImg from "../assets/service-international.webp";
@@ -130,8 +130,11 @@ export const Route = createFileRoute("/cpa-international")({
         },
         {
           title: "פעילות עסקית בין-מדינתית",
-          body:
-            "לחברות עם פעילות בכמה מדינות (סניפים, חברות בנות, לקוחות בחו״ל) יש שיקולי Transfer Pricing (תמחור עסקאות בין-חברתיות במחירי שוק), אמנות מס למניעת כפל מס, מיסוי במקור על תשלומים לחו״ל (Withholding Tax), פרטי חשבונאות בין ישויות, וסיכוני Permanent Establishment. אנחנו בונים מבנה מס אופטימלי ושומרים על עמידה מלאה בדרישות הרגולציה בישראל ומחוצה לה.",
+          body: (
+            <>
+              לחברות עם פעילות בכמה מדינות (סניפים, חברות בנות, לקוחות בחו״ל) יש שיקולי Transfer Pricing (תמחור עסקאות בין-חברתיות במחירי שוק), אמנות מס למניעת כפל מס, מיסוי במקור על תשלומים לחו״ל (Withholding Tax), פרטי חשבונאות בין ישויות, וסיכוני Permanent Establishment. אנחנו בונים מבנה מס אופטימלי ושומרים על עמידה מלאה בדרישות הרגולציה. חברות זרות שפותחות פעילות בישראל ימצאו סקירה מלאה בעמוד <Link to="/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ליווי חברות זרות בישראל</Link>, וסטארטאפים לפני Flip לדלאוור ימצאו את הרקע ב<Link to="/cpa-startups" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ליווי סטארטאפים</Link>.
+            </>
+          ),
           bullets: [
             "הכנת דוחות Transfer Pricing מקצועיים לפי OECD Guidelines",
             "ניתוח אמנות מס וניצול זיכויים מלאים",

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2 } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-foreign.webp";
@@ -120,8 +120,11 @@ export const Route = createFileRoute("/en/cpa-foreign-companies")({
         },
         {
           title: "Fractional CFO for foreign companies in Israel",
-          body:
-            "Multinationals operating in Israel need a senior local finance presence that speaks the HQ's language (US GAAP / IFRS, SOX-ready internal controls) while knowing Israeli regulation in depth. We serve as the company's Israeli Fractional CFO — the bridge between Corporate and Local. Full service page: /en/fractional-cfo.",
+          body: (
+            <>
+              Multinationals operating in Israel need a senior local finance presence that speaks the HQ's language (US GAAP / IFRS, SOX-ready internal controls) while knowing Israeli regulation in depth. We serve as the company's Israeli <Link to="/en/fractional-cfo" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">Fractional CFO</Link> — the bridge between Corporate and Local — while also leading the annual <Link to="/en/audit" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">statutory audit and M&A due diligence</Link> and running local <Link to="/en/payroll" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">payroll and Section 102 equity plans</Link>.
+            </>
+          ),
           bullets: [
             "Local Country Controller / Country CFO for HQ in Israel",
             "Monthly and quarterly reporting to HQ in the required format and currency",

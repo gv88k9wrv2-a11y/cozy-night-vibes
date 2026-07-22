@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { LineChart } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-cfo.webp";
@@ -88,8 +88,11 @@ export const Route = createFileRoute("/en/fractional-cfo")({
       sections={[
         {
           title: "Strategic Corporate Finance",
-          body:
-            "We turn finance from a cost center into a growth engine. Disciplined budgeting, continuous variance tracking, and early detection of drift — with clear recommended actions for management and the board.",
+          body: (
+            <>
+              We turn finance from a cost center into a growth engine. Disciplined budgeting, continuous variance tracking, and early detection of drift — with clear recommended actions for management and the board. This service pairs naturally with our <Link to="/en/cpa-startups" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">startup CPA practice</Link>, <Link to="/en/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">foreign-company support in Israel</Link>, and <Link to="/en/audit" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">statutory audit and assurance</Link>.
+            </>
+          ),
           bullets: [
             "Annual budget build (Bottom-Up + Top-Down) with manager ownership",
             "Weekly / monthly / quarterly Cash Flow Forecast",

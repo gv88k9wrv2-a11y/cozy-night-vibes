@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Rocket } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-startups.webp";
@@ -141,8 +141,11 @@ export const Route = createFileRoute("/en/cpa-startups")({
         },
         {
           title: "Fractional CFO — senior finance leadership for your startup",
-          body:
-            "Most Seed–Series B startups do not yet justify a full-time CFO, yet the financial decisions at that stage are critical — Runway, pricing, fundraising and Board relations. We step in as a Fractional CFO and deliver the full senior finance layer you need. See the dedicated service page: /en/fractional-cfo.",
+          body: (
+            <>
+              Most Seed–Series B startups do not yet justify a full-time CFO, yet the financial decisions at that stage are critical — Runway, pricing, fundraising and Board relations. We step in as a <Link to="/en/fractional-cfo" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">Fractional CFO</Link> and deliver the full senior finance layer you need. Companies with cross-border operations usually pair this with <Link to="/en/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">international tax advisory</Link>, while foreign parents scaling an Israeli entity should also review our <Link to="/en/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">foreign-company support in Israel</Link>.
+            </>
+          ),
           bullets: [
             "Annual budgeting, cash management and Burn / Runway",
             "3–5 year VC-grade financial model (Base / Bull / Bear)",

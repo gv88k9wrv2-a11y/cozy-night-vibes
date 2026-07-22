@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Rocket } from "lucide-react";
 import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 import heroImg from "../assets/service-startups.webp";
@@ -208,8 +208,11 @@ export const Route = createFileRoute("/cpa-startups")({
         },
         {
           title: "Fractional CFO – ניהול כספים בכיר לסטארטאפ",
-          body:
-            "רוב הסטארטאפים בשלבי Seed–Series B עדיין לא מצדיקים CFO משרה מלאה, אבל דווקא אז ההחלטות הפיננסיות קריטיות – Runway, תמחור, גיוסים ובורד. אנחנו נכנסים כ-Fractional CFO ומספקים את כל שכבת הניהול הפיננסי הבכירה שנדרשת. ראו את עמוד השירות המלא: /fractional-cfo.",
+          body: (
+            <>
+              רוב הסטארטאפים בשלבי Seed–Series B עדיין לא מצדיקים CFO משרה מלאה, אבל דווקא אז ההחלטות הפיננסיות קריטיות – Runway, תמחור, גיוסים ובורד. אנחנו נכנסים כ-<Link to="/fractional-cfo" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">Fractional CFO</Link> ומספקים את כל שכבת הניהול הפיננסי הבכירה שנדרשת. חברות עם פעילות מעבר לים ישלימו את התמונה עם <Link to="/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ייעוץ מיסוי בינלאומי</Link>, וחברות זרות בישראל יעדיפו לרוב את המסלול של <Link to="/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ליווי חברות בת בישראל</Link>.
+            </>
+          ),
           bullets: [
             "בניית תקציב שנתי, ניהול תזרים וחישובי Burn / Runway",
             "מודל פיננסי 3–5 שנים בסטנדרט VC (Base / Bull / Bear)",

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe2 } from "lucide-react";
 import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 import heroImg from "../assets/service-foreign.webp";
@@ -157,8 +157,11 @@ export const Route = createFileRoute("/cpa-foreign-companies")({
         },
         {
           title: "Fractional CFO לחברות זרות בישראל",
-          body:
-            "חברות רב-לאומיות שפועלות בישראל צריכות דמות כספים בכירה מקומית שמדברת עם ה-HQ בשפה שלו (US GAAP / IFRS, בקרה פנימית SOX-ready), ובאותו זמן מכירה את הרגולציה הישראלית לעומק. אנחנו משמשים כ-Fractional CFO ישראלי של החברה – מגשרים בין ה-Corporate ל-Local. עמוד השירות המלא: /fractional-cfo.",
+          body: (
+            <>
+              חברות רב-לאומיות שפועלות בישראל צריכות דמות כספים בכירה מקומית שמדברת עם ה-HQ בשפה שלו (US GAAP / IFRS, בקרה פנימית SOX-ready), ובאותו זמן מכירה את הרגולציה הישראלית לעומק. אנחנו משמשים כ-<Link to="/fractional-cfo" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">Fractional CFO ישראלי</Link> של החברה – מגשרים בין ה-Corporate ל-Local, מובילים את <Link to="/audit" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">הביקורת השנתית ו-Due Diligence</Link>, ומטפלים ב<Link to="/payroll" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">שכר ו-ESOP לעובדים בישראל</Link>.
+            </>
+          ),
           bullets: [
             "Local Country Controller / Country CFO של המטה בישראל",
             "דיווח חודשי ורבעוני ל-HQ בפורמט ובמטבע הנדרשים",

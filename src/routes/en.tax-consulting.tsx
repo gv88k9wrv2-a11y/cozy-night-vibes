@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileSpreadsheet } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-tax.webp";
@@ -60,7 +60,11 @@ export const Route = createFileRoute("/en/tax-consulting")({
         },
         {
           title: "Crypto Tax Compliance",
-          body: "The Israel Tax Authority classifies Bitcoin, Ethereum and digital assets as property for tax purposes — every sale, coin-to-coin swap or purchase-in-crypto is a taxable event. We advise on digital assets, DeFi, NFT and staking — including certified reports and moving capital into the Israeli banking system in strict alignment with Bank of Israel policy:",
+          body: (
+            <>
+              The Israel Tax Authority classifies Bitcoin, Ethereum and digital assets as property for tax purposes — every sale, coin-to-coin swap or purchase-in-crypto is a taxable event. We advise on digital assets, DeFi, NFT and staking — including certified reports and moving capital into the Israeli banking system in strict alignment with Bank of Israel policy. Cross-border holders should also review our <Link to="/en/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">international tax practice</Link>, and independent crypto traders should see our <Link to="/en/cpa-freelancers" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">CPA for freelancers</Link>:
+            </>
+          ),
           bullets: [
             "Full blockchain P&L: Binance, Coinbase, Kraken, KuCoin, MetaMask",
             "Real capital-gain calculation using FIFO/LIFO at transaction-date FX",

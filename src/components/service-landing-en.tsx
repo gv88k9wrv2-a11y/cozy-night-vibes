@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import {
   FloatingWhatsAppEn,
   RelatedServicesNavEn,
@@ -18,7 +19,7 @@ export type ServiceLandingEnProps = {
   title: string;
   intro: string;
   highlights: string[];
-  sections: { title: string; body: string; bullets?: string[] }[];
+  sections: { title: string; body: ReactNode; bullets?: string[] }[];
   faqs: ServiceFAQ[];
   ctaHeadline?: string;
   icon: LucideIcon;

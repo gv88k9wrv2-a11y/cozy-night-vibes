@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Plane } from "lucide-react";
 import { ServiceLandingEn, buildFaqJsonLd } from "../components/service-landing-en";
 import heroImg from "../assets/service-international.webp";
@@ -55,7 +55,11 @@ export const Route = createFileRoute("/en/cpa-international")({
         },
         {
           title: "Treaty planning & cross-border",
-          body: "For dual-status individuals, executives with global equity and families spread across countries — we plan across treaties, coordinate foreign tax credits, time income recognition and file coordinated returns.",
+          body: (
+            <>
+              For dual-status individuals, executives with global equity and families spread across countries — we plan across treaties, coordinate foreign tax credits, time income recognition and file coordinated returns. Foreign parents entering Israel should also see our <Link to="/en/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">foreign-company support</Link>, and founders considering an Israel–Delaware flip should review our <Link to="/en/cpa-startups" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">startup CPA practice</Link>.
+            </>
+          ),
         },
       ]}
       faqs={FAQS}

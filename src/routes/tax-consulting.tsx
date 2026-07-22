@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileSpreadsheet } from "lucide-react";
 import { ServiceLanding, buildFaqJsonLd } from "../components/service-landing";
 import heroImg from "../assets/service-tax.webp";
@@ -162,8 +162,11 @@ export const Route = createFileRoute("/tax-consulting")({
         },
         {
           title: "מיסוי קריפטו ונכסים דיגיטליים",
-          body:
-            "רשות המסים מסווגת ביטקוין, אתריום ומטבעות דיגיטליים כנכס לצורכי מס – כל מכירה, המרה בין מטבעות או שימוש בקנייה מהווים אירוע מס. אנחנו מהמשרדים המובילים בישראל בטיפול בנכסים דיגיטליים, DeFi, NFT וסטייקינג – כולל הכנת דוחות מוסמכים והעברת כספים למערכת הבנקאית תוך עמידה מלאה במדיניות בנק ישראל:",
+          body: (
+            <>
+              רשות המסים מסווגת ביטקוין, אתריום ומטבעות דיגיטליים כנכס לצורכי מס – כל מכירה, המרה בין מטבעות או שימוש בקנייה מהווים אירוע מס. אנחנו מהמשרדים המובילים בישראל בטיפול בנכסים דיגיטליים, DeFi, NFT וסטייקינג – כולל הכנת דוחות מוסמכים והעברת כספים למערכת הבנקאית תוך עמידה מלאה במדיניות בנק ישראל. לפעילות עם היבט חוצה-גבולות ראו גם <Link to="/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ייעוץ מיסוי בינלאומי</Link>, וסוחרי קריפטו עצמאים – <Link to="/cpa-freelancers" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">רו״ח לעצמאים ופרילנסרים</Link>:
+            </>
+          ),
           bullets: [
             "דוח רווח והפסד מלא מ-Blockchain: Binance, Coinbase, Kraken, KuCoin, MetaMask",
             "חישוב רווח הון ריאלי לפי שיטת FIFO/LIFO ובשער חליפין ליום העסקה",
