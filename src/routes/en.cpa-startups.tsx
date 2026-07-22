@@ -19,7 +19,7 @@ export const Route = createFileRoute("/en/cpa-startups")({
   head: () => ({
     meta: [
       { title: "CPA for Startups in Israel | Fundraising, Section 102, Delaware Flip, 409A" },
-      { name: "description", content: "Boutique CPA firm for Israeli startups — Pre-Seed to Series C, SAFE/CLA structuring, Section 102 ESOP, 409A valuations, Israel–Delaware Flip, Preferred Technological Enterprise, IIA grants and IFRS/US-GAAP." },
+      { name: "description", content: "Boutique CPA for Israeli startups: Pre-Seed to Series C, SAFE/CLA, Section 102 ESOP, 409A, Delaware Flip, IIA grants and IFRS. Book a consultation." },
       { property: "og:title", content: "CPA for Startups — Nimrodi & Co." },
       { property: "og:description", content: "Accounting, tax and CFO services for Israeli startups from Pre-Seed to Exit." },
       { property: "og:url", content: `${BASE}/en/cpa-startups` },
