@@ -35,7 +35,7 @@ export const Route = createFileRoute("/en/cpa-herzliya")({
       icon={MapPin}
       eyebrow="Herzliya Pituach"
       title="Boutique CPA firm in the heart of Herzliya Pituach"
-      intro="Our office is located in Herzliya Pituach, at the center of Israel's premier business and technology district. We serve local tech companies, startups, foreign R&D centers, professionals and successful families in the Sharon region."
+      intro="Our office is located in Herzliya Pituach, at the center of Herzliya Pituach business and technology district. We serve local tech companies, startups, foreign R&D centers, professionals and successful families in the Sharon region."
       highlights={[
         "Located in Herzliya Pituach business district",
         "Deep familiarity with local tech ecosystem",

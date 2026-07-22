@@ -7,7 +7,7 @@ const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.a
 const FAQS = [
   { q: "What is a Pre-Ruling and when should we get one?", a: "A Pre-Ruling is a binding written position from the Israel Tax Authority on a specific transaction (M&A, reorganization, ESOP structure, residency, crypto activity). We recommend one whenever the tax exposure is material and precedent is unclear." },
   { q: "Do you handle tax disputes, audits and appeals?", a: "Yes — from responding to ITA information requests, through the assessment process (שומה), objections (השגה), settlement negotiations and appeals to the District Court." },
-  { q: "Can you handle crypto tax compliance?", a: "Yes. We are one of Israel's leading firms on crypto — Bitcoin, DeFi, NFT, staking. We produce certified blockchain P&L reports, obtain Pre-Rulings, and manage AML/KYC to move capital into the Israeli banking system in strict alignment with Bank of Israel policy." },
+  { q: "Can you handle crypto tax compliance?", a: "Yes. We provide crypto tax services — Bitcoin, DeFi, NFT, staking. We produce certified blockchain P&L reports, obtain Pre-Rulings, and manage AML/KYC to move capital into the Israeli banking system in strict alignment with Bank of Israel policy." },
   { q: "What is Voluntary Disclosure (גילוי מרצון)?", a: "A structured ITA process to legalize previously undeclared foreign accounts, assets or income — paying the tax with limited interest and receiving criminal immunity. With FATCA and CRS in force, exposure is nearly automatic; acting proactively is essential." },
   { q: "Can you plan a corporate reorganization tax-efficiently?", a: "Yes — we plan and execute tax-deferred reorganizations under Sections 103–105, including mergers, spin-offs and asset transfers between related entities." },
 ];
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/en/tax-consulting")({
       sections={[
         {
           title: "Planning that anticipates the Exit",
-          body: "The best tax planning happens before transactions close, not after. We work with founders, executives and boards to model the tax implications of fundraising, M&A, secondaries, spin-offs and Exit — and choose the structure that maximizes after-tax outcome.",
+          body: "Effective tax planning happens before transactions close, not after. We work with founders, executives and boards to model the tax implications of fundraising, M&A, secondaries, spin-offs and Exit — and choose the structure that maximizes after-tax outcome.",
         },
         {
           title: "Pre-Rulings (החלטות מיסוי)",
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/en/tax-consulting")({
         },
         {
           title: "Crypto Tax Compliance",
-          body: "The Israel Tax Authority classifies Bitcoin, Ethereum and digital assets as property for tax purposes — every sale, coin-to-coin swap or purchase-in-crypto is a taxable event. We are one of Israel's leading firms on digital assets, DeFi, NFT and staking — including certified reports and moving capital into the Israeli banking system in strict alignment with Bank of Israel policy:",
+          body: "The Israel Tax Authority classifies Bitcoin, Ethereum and digital assets as property for tax purposes — every sale, coin-to-coin swap or purchase-in-crypto is a taxable event. We advise on digital assets, DeFi, NFT and staking — including certified reports and moving capital into the Israeli banking system in strict alignment with Bank of Israel policy:",
           bullets: [
             "Full blockchain P&L: Binance, Coinbase, Kraken, KuCoin, MetaMask",
             "Real capital-gain calculation using FIFO/LIFO at transaction-date FX",

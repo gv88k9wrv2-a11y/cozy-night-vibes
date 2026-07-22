@@ -74,7 +74,7 @@ function AboutEn() {
             <article>
               <h2 className="font-display text-2xl font-bold text-primary sm:text-3xl">Where we're based</h2>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Our office is in Herzliya Pituach — Israel's premier business district and home to the country's leading technology campuses. We serve clients across Israel and internationally.
+                Our office is in Herzliya Pituach — the Herzliya Pituach business district, home to many technology campuses. We serve clients across Israel and internationally.
               </p>
             </article>
           </div>
