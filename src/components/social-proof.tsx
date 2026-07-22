@@ -27,8 +27,7 @@ const COPY = {
     credTitle: "An established firm with a real track record",
     credSub: "Facts, not marketing claims.",
     facts: [
-      { icon: CalendarDays, label: "Operating since 2000" },
-      { icon: Award, label: "25+ years of professional experience" },
+      { icon: CalendarDays, label: "Established in 2000 – 25+ years of experience" },
       { icon: UserCheck, label: "Led by CPA Shlomo Nimrodi" },
       { icon: Globe2, label: "Serving companies, startups & international clients" },
     ],
