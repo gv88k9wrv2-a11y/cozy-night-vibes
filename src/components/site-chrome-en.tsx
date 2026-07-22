@@ -284,7 +284,7 @@ export function SiteFooterEn() {
               <li key={l.to}><Link to={l.to} className="hover:text-gold">{l.label}</Link></li>
             ))}
             <li><Link to="/en/accessibility" className="hover:text-gold">Accessibility</Link></li>
-            <li><a href="/en/privacy-policy" className="hover:text-gold">Privacy Policy</a></li>
+            <li><Link to="/en/privacy-policy" className="hover:text-gold">Privacy Policy</Link></li>
             <li><Link to="/" className="hover:text-gold">עברית / Hebrew</Link></li>
           </ul>
         </div>
