@@ -72,7 +72,7 @@ export const SERVICE_GROUPS_EN: { label: string; items: ServiceItem[] }[] = [
     items: [
       { to: "/en/fractional-cfo", label: "Fractional CFO", desc: "Burn · Runway · Board · VC prep", icon: LineChart },
       { to: "/en/bookkeeping", label: "Bookkeeping", desc: "Cloud accounting · Monthly close · MIS", icon: Calculator },
-      { to: "/en/payroll", label: "Payroll", desc: "Section 102, ESOP, form 106", icon: ReceiptText },
+      { to: "/en/payroll", label: "Payroll", desc: "Section 102 (ESOP), Form 106 (Annual Tax Statement)", icon: ReceiptText },
       { to: "/en/audit", label: "Audit & Assurance", desc: "Israeli GAAP · IFRS", icon: FileSearch },
       { to: "/en/tax-consulting", label: "Tax Advisory", desc: "Planning, Pre-Ruling, appeals", icon: FileSpreadsheet },
     ],
