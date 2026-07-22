@@ -11,14 +11,14 @@ import {
 import { LeadForm } from "./lead-form";
 import { ScrollToTop } from "./scroll-to-top";
 
-export type ServiceFAQ = { q: string; a: string };
+export type ServiceFAQ = { q: string; a: React.ReactNode };
 
 export type ServiceLandingProps = {
   eyebrow: string;
   title: string;
   intro: string;
   highlights: string[];
-  sections: { title: string; body: string; bullets?: string[] }[];
+  sections: { title: string; body: React.ReactNode; bullets?: string[] }[];
   faqs: ServiceFAQ[];
   ctaHeadline?: string;
   icon: LucideIcon;
