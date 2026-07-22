@@ -16,7 +16,7 @@ export const Route = createFileRoute("/en/cpa-freelancers")({
   head: () => ({
     meta: [
       { title: "CPA for Freelancers, Consultants & Single-Member Companies in Israel" },
-      { name: "description", content: "Israeli CPA for freelancers, consultants and single-member companies — digital registration, ongoing filings, annual return, capital declaration and Pocket Company (חברת ארנק) planning." },
+      { name: "description", content: "Israeli CPA for freelancers, consultants and single-member companies: registration, filings, annual return and Pocket Company planning. Get started." },
       { property: "og:title", content: "CPA for Freelancers — Nimrodi & Co." },
       { property: "og:description", content: "Premium service for Israeli freelancers, elite tech consultants and boutique agencies." },
       { property: "og:url", content: `${BASE}/en/cpa-freelancers` },
