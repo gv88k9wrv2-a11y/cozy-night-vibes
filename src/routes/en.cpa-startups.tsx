@@ -58,7 +58,7 @@ export const Route = createFileRoute("/en/cpa-startups")({
           body: "Everything you need so you can focus on product and customers:",
           bullets: [
             "Incorporation, structure and founders' agreements",
-            "Digital bookkeeping (Priority / QuickBooks / Xero / NetSuite)",
+            "Digital bookkeeping on modern cloud accounting platforms",
             "IFRS / US-GAAP annual financial statements",
             "Corporate and founder tax planning",
             "IIA grants, R&D incentives and Chief Scientist programs",

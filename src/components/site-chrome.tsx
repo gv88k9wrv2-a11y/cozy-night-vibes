@@ -81,7 +81,7 @@ const SERVICE_GROUPS: { label: string; items: ServiceItem[] }[] = [
       {
         to: "/bookkeeping",
         label: "הנהלת חשבונות",
-        desc: "Priority · ריווחית · QuickBooks",
+        desc: "מערכות ענן · סגירת חודש · דוחות ניהוליים",
         icon: Calculator,
       },
       {
