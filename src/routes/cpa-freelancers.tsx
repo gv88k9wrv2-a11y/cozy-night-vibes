@@ -188,9 +188,8 @@ export const Route = createFileRoute("/cpa-freelancers")({
       govPortals={{
         title: "פתיחת תיק, דיווחי מע\"מ ומיסוי לעצמאים",
         links: [
-
-          { label: "פורטל עצמאים – ביטוח לאומי", href: "https://www.btl.gov.il" },
-
+          { label: "רשות המסים – פתיחת תיק, מע\"מ ודוח שנתי לעצמאים", href: "https://www.gov.il/he/departments/israel_tax_authority" },
+          { label: "המוסד לביטוח לאומי – פורטל עצמאים", href: "https://www.btl.gov.il" },
         ],
       }}
       faqs={FAQS}

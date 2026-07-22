@@ -174,8 +174,8 @@ export const Route = createFileRoute("/fractional-cfo")({
       govPortals={{
         title: "פורטלי מימון, מענקים וקרנות מדינה",
         links: [
-          { label: "הרשות להשקעות – מסלולי סיוע ומענקים להתרחבות", href: "https://www.gov.il/he/departments/israel_tax_authority" },
-
+          { label: "רשות המסים – הטבות מס, מקדמות ודיווחים", href: "https://www.gov.il/he/departments/israel_tax_authority" },
+          { label: "רשות החדשנות – מסלולי מימון ומענקים", href: "https://innovationisrael.org.il" },
         ],
       }}
       faqs={FAQS}
