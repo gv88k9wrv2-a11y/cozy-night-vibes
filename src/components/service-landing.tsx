@@ -19,7 +19,7 @@ export type ServiceLandingProps = {
   title: string;
   intro: string;
   highlights: string[];
-  sections: { title: string; body: React.ReactNode; bullets?: string[] }[];
+  sections: { title: string; body: ReactNode; bullets?: string[] }[];
   faqs: ServiceFAQ[];
   ctaHeadline?: string;
   icon: LucideIcon;
