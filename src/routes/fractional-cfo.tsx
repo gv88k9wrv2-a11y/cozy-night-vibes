@@ -90,8 +90,11 @@ export const Route = createFileRoute("/fractional-cfo")({
       sections={[
         {
           title: "אסטרטגיית פיננסים תאגידית",
-          body:
-            "אנחנו הופכים את הפיננסים ממרכז עלות למנוע צמיחה. תכנון תקציב אחראי, בקרה שוטפת מול ביצוע, וזיהוי מוקדם של סטיות – עם המלצות פעולה ברורות להנהלה ולבורד.",
+          body: (
+            <>
+              אנחנו הופכים את הפיננסים ממרכז עלות למנוע צמיחה. תכנון תקציב אחראי, בקרה שוטפת מול ביצוע, וזיהוי מוקדם של סטיות – עם המלצות פעולה ברורות להנהלה ולבורד. השירות משתלב באופן טבעי עם <Link to="/cpa-startups" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ליווי סטארטאפים</Link>, <Link to="/cpa-foreign-companies" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ליווי חברות זרות בישראל</Link> ו<Link to="/audit" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ביקורת דוחות כספיים</Link>.
+            </>
+          ),
           bullets: [
             "בניית תקציב שנתי (Bottom-Up + Top-Down) עם Ownership של מנהלים",
             "Cash Flow Forecast שבועי / חודשי / רבעוני",
