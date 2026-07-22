@@ -211,7 +211,7 @@ function HomeEn() {
               {[
                 { t: "Senior partner attention", d: "Direct access to the partner in charge — not a rotating junior team." },
                 { t: "Cross-border expertise", d: "Israeli-US Flips, transfer pricing, treaties, dual filings." },
-                { t: "Tech industry native", d: "Priority, QuickBooks, Xero, NetSuite — and we speak startup." },
+                { t: "Tech industry native", d: "Fluent across modern cloud accounting stacks — and we speak startup." },
                 { t: "Regulatory depth", d: "Tax Authority pre-rulings, IIA grants, preferred enterprise status." },
                 { t: "Fundraising support", d: "Data rooms, financial modeling, DD ready — from Seed to Series C." },
                 { t: "Bilingual practice", d: "Full service in Hebrew and English, working across time zones." },

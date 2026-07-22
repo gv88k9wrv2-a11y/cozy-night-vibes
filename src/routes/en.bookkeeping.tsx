@@ -5,7 +5,7 @@ import heroImg from "../assets/service-bookkeeping.webp";
 
 const BASE = "https://id-preview--11cf7c4c-7c75-4426-b3e1-7078afb54370.lovable.app";
 const FAQS = [
-  { q: "Which accounting software do you support?", a: "Priority, Xero, QuickBooks Online, NetSuite, Rivhit and SAP Business One. We choose the right platform per client and manage the full setup, chart of accounts and integrations." },
+  { q: "Which accounting software do you support?", a: "We work across all leading Israeli and international cloud accounting platforms — from lightweight tools for freelancers to ERP systems for mid-market and multinational groups. We choose the right platform per client and manage the full setup, chart of accounts and integrations." },
   { q: "Can you take over from an existing bookkeeper?", a: "Yes. We handle a clean migration: opening balances, historical reconciliations, VAT alignment and full handover from the previous provider — usually within 2–4 weeks." },
   { q: "Do you handle VAT and withholding tax reporting?", a: "Full monthly / bi-monthly VAT (Form 874), withholding tax on service providers (Form 856), employer reports and year-end reconciliations." },
 ];
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/en/bookkeeping")({
   head: () => ({
     meta: [
       { title: "Bookkeeping Services in Israel | Nimrodi & Co. CPA" },
-      { name: "description", content: "Professional bookkeeping in Israel — Priority, Xero, QuickBooks. Monthly VAT, withholding tax, management reports and clean books ready for audit." },
+      { name: "description", content: "Professional cloud bookkeeping in Israel. Monthly VAT, withholding tax, management reports and clean books ready for audit. Talk to us." },
       { property: "og:title", content: "Bookkeeping — Nimrodi & Co. CPA" },
       { property: "og:description", content: "Modern digital bookkeeping and monthly reporting for companies and startups in Israel." },
       { property: "og:url", content: `${BASE}/en/bookkeeping` },
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/en/bookkeeping")({
       icon={Calculator}
       eyebrow="Bookkeeping"
       title="Modern digital bookkeeping for companies in Israel"
-      intro="Clean, timely books are the foundation of every financial decision. We run full-cycle bookkeeping on modern cloud platforms — Priority, Xero and QuickBooks — with clear monthly reporting to management and investors."
+      intro="Clean, timely books are the foundation of every financial decision. We run full-cycle bookkeeping on modern cloud platforms, with clear monthly reporting to management and investors."
       highlights={[
         "Full-cycle monthly bookkeeping",
         "VAT filings (Form 874) and withholding tax",
@@ -59,7 +59,7 @@ export const Route = createFileRoute("/en/bookkeeping")({
         },
         {
           title: "Cloud stack & automation",
-          body: "We work exclusively on modern cloud platforms so you and your investors have real-time visibility. Typical stack: accounting (Priority / Xero / QuickBooks), payments (Melio, Bill.com, Papaya), receipts (Dext, Hashavshevet Docs), and reporting (Google Sheets / Fathom / native BI).",
+          body: "We work exclusively on modern cloud platforms so you and your investors have real-time visibility. A typical stack combines cloud accounting, digital AP and payments, automated receipt capture, and layered management reporting and BI — tailored to each client.",
         },
         {
           title: "Reporting cadence",

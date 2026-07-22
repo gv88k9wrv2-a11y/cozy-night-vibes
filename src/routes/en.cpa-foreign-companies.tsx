@@ -63,7 +63,7 @@ export const Route = createFileRoute("/en/cpa-foreign-companies")({
             "Registration with VAT, ITA and Bituach Leumi",
             "Bank account opening with full KYC representation",
             "Employer registration and payroll setup",
-            "Accounting system tailoring (Priority / SAP / QuickBooks / NetSuite)",
+            "Accounting system tailoring for the entity's needs",
           ],
         },
         {
