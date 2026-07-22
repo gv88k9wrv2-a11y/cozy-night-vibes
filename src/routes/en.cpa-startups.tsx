@@ -157,6 +157,14 @@ export const Route = createFileRoute("/en/cpa-startups")({
         },
       ]}
 
+      govPortals={{
+        title: "R&D Grants, Tech Incentives & Section 102 Options",
+        links: [
+          { label: "Israel Innovation Authority – Incentive Programs & Grants", href: "https://innovationisrael.org.il/en/" },
+          { label: "Capital Investment Encouragement Law (Tax Relief)", href: "https://www.gov.il/en/departments/units/capital_investment_law" },
+          { label: "Employee Options (Section 102) – Tax Authority", href: "https://www.gov.il/en/departments/israel_tax_authority" },
+        ],
+      }}
       faqs={FAQS}
       ctaHeadline="Building a startup or about to raise? Let's talk."
     />

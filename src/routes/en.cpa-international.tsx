@@ -62,6 +62,14 @@ export const Route = createFileRoute("/en/cpa-international")({
           ),
         },
       ]}
+      govPortals={{
+        title: "Israeli Tax Benefits & Relocation Resources",
+        links: [
+          { label: "Tax Benefits for Returning Residents & New Immigrants (Olim)", href: "https://www.gov.il/en/departments/ministry_of_aliyah_and_integration" },
+          { label: "Double Taxation Treaties of Israel", href: "https://www.gov.il/en/departments/units/double_taxation_agreements" },
+          { label: "Israel Tax Authority – International Taxation Portal", href: "https://www.gov.il/en/departments/units/international_taxation_unit" },
+        ],
+      }}
       faqs={FAQS}
     />
   ),

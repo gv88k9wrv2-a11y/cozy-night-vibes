@@ -205,6 +205,15 @@ export const Route = createFileRoute("/tax-consulting")({
           ],
         },
       ]}
+      govPortals={{
+        title: "מאגרי מידע, מע\"מ, פסיקה וטפסים",
+        links: [
+          { label: "מאגר החלטות מיסוי (Pre-Rulings) רשמי", href: "https://www.gov.il/he/departments/guides/pre-rulings" },
+          { label: "מדריך מע\"מ, פטורים ועסקאות מקרקעין", href: "https://www.gov.il/he/departments/guides/vat-guides" },
+          { label: "מערכת איתור טפסים ואישורי ניכוי במקור", href: "https://www.gov.il/he/service/tax-forms" },
+          { label: "אמנות למניעת כפל מס – משרד האוצר", href: "https://www.gov.il/he/departments/units/double_taxation_agreements" },
+        ],
+      }}
       faqs={FAQS}
       ctaHeadline="מתלבטים לגבי צעד עסקי מסוים? נשמח לעזור לחשוב אתכם."
     />

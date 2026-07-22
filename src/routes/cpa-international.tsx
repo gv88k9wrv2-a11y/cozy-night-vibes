@@ -181,6 +181,15 @@ export const Route = createFileRoute("/cpa-international")({
           ],
         },
       ]}
+      govPortals={{
+        title: "מיסוי בינלאומי, מע\"מ יבוא/יצוא ואמנות מס",
+        links: [
+          { label: "היחידה למיסוי בינלאומי ברשות המסים", href: "https://www.gov.il/he/departments/units/international_taxation_unit" },
+          { label: "מע\"מ אפס על יצוא שירותים ונכסים בלתי מוחשיים", href: "https://www.gov.il/he/departments/guides/zero-vat-export" },
+          { label: "מדריך זכויות והטבות לתושבים חוזרים ועולים", href: "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration" },
+          { label: "רשימת האמנות למניעת כפל מס של ישראל", href: "https://www.gov.il/he/departments/units/double_taxation_agreements" },
+        ],
+      }}
       faqs={FAQS}
       ctaHeadline="לפני מעבר לחו״ל או חזרה לישראל – חובה להתייעץ מוקדם."
     />

@@ -169,6 +169,14 @@ export const Route = createFileRoute("/payroll")({
           ],
         },
       ]}
+      govPortals={{
+        title: "מערכות דיווח מעסיקים, ניכויים וזכויות",
+        links: [
+          { label: "פורטל מעסיקים – ביטוח לאומי", href: "https://www.btl.gov.il/Subject/Employers" },
+          { label: "רשות המסים – דיווחי ניכויים (טפסים 102 / 126)", href: "https://www.gov.il/he/service/deductions-annual-report" },
+          { label: "זרוע העבודה – זכויות עובדים, שכר מינימום ופנסיה", href: "https://www.gov.il/he/departments/labor_arm" },
+        ],
+      }}
       faqs={FAQS}
     />
   ),

@@ -175,6 +175,14 @@ export const Route = createFileRoute("/audit")({
           ],
         },
       ]}
+      govPortals={{
+        title: "הגשות לרשמים ודיווחים תאגידיים",
+        links: [
+          { label: "הגשת אגרה ודוח שנתי מקוון – רשם החברות", href: "https://www.gov.il/he/service/company_annual_report" },
+          { label: "רשם העמותות – פורטל דיווחים ומלכ\"רים", href: "https://www.gov.il/he/departments/units/non_profit_organizations" },
+          { label: "רשם השותפויות – רישום ועדכון שותפויות", href: "https://www.gov.il/he/service/partnership_registration" },
+        ],
+      }}
       faqs={FAQS}
     />
   ),

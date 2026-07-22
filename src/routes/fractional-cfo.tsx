@@ -171,6 +171,14 @@ export const Route = createFileRoute("/fractional-cfo")({
           ],
         },
       ]}
+      govPortals={{
+        title: "פורטלי מימון, מענקים וקרנות מדינה",
+        links: [
+          { label: "הקרן להלוואות בערבות מדינה לעסקים", href: "https://www.gov.il/he/departments/units/state_guaranteed_loans" },
+          { label: "הרשות להשקעות – מסלולי סיוע ומענקים להתרחבות", href: "https://www.gov.il/he/departments/investment_authority" },
+          { label: "בנק ישראל – נתוני שוק, ריביות ושערי חליפין", href: "https://www.boi.org.il" },
+        ],
+      }}
       faqs={FAQS}
       ctaHeadline="לפני הגיוס הבא או בישיבת בורד חודש הבא? בואו נדבר."
     />

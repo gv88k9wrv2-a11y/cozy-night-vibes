@@ -178,6 +178,15 @@ export const Route = createFileRoute("/bookkeeping")({
           ],
         },
       ]}
+      govPortals={{
+        title: "מערכות תשלום ודיווחי מע\"מ ומקדמות",
+        links: [
+          { label: "מערכת דיווח ותשלום מע\"מ תקופתי מקוונת", href: "https://www.gov.il/he/service/vat-report-and-payment" },
+          { label: "דיווח חשבוניות ישראל (חוק צמצום המזומן)", href: "https://www.gov.il/he/departments/guides/israel-invoices" },
+          { label: "תשלום מקדמות מס הכנסה אונליין", href: "https://www.gov.il/he/service/income-tax-monthly-reporting" },
+          { label: "שרת התשלומים הממשלתי (Gov.il Payments)", href: "https://eform.gov.il" },
+        ],
+      }}
       faqs={FAQS}
     />
   ),

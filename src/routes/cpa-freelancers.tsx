@@ -185,6 +185,15 @@ export const Route = createFileRoute("/cpa-freelancers")({
           ],
         },
       ]}
+      govPortals={{
+        title: "פתיחת תיק, דיווחי מע\"מ ומיסוי לעצמאים",
+        links: [
+          { label: "פתיחת תיק מע\"מ, מס הכנסה וביטוח לאומי", href: "https://www.gov.il/he/service/business_registration_tax_authority" },
+          { label: "תשלום ודיווח מע\"מ תקופתי (עוסק מורשה/פטור)", href: "https://www.gov.il/he/service/vat-report-and-payment" },
+          { label: "פורטל עצמאי – ביטוח לאומי", href: "https://www.btl.gov.il/Benefits/Unemployment/Pages/self_employed.aspx" },
+          { label: "שידור דוח שנתי והצהרת הון אונליין", href: "https://www.gov.il/he/service/annual-tax-return" },
+        ],
+      }}
       faqs={FAQS}
       ctaHeadline="מוכן לקבל שקט נפשי? קבע פגישת ייעוץ ראשונית."
     />
