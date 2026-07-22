@@ -178,8 +178,9 @@ export const Route = createFileRoute("/audit")({
       govPortals={{
         title: "הגשות לרשמים ודיווחים תאגידיים",
         links: [
-          { label: "הגשת אגרה ודוח שנתי מקוון – רשם החברות", href: "https://www.gov.il/he/departments/ministry_of_justice" },
-
+          { label: "משרד המשפטים – רשם החברות, העמותות והתאגידים", href: "https://www.gov.il/he/departments/ministry_of_justice" },
+          { label: "רישום ודיווח שותפויות – שירות מקוון", href: "https://www.gov.il/he/service/partnership_registration" },
+          { label: "רשות המסים – דיווחים ואישורי ניכוי", href: "https://www.gov.il/he/departments/israel_tax_authority" },
         ],
       }}
       faqs={FAQS}

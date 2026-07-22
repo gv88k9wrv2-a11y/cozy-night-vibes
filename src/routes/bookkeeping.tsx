@@ -181,10 +181,8 @@ export const Route = createFileRoute("/bookkeeping")({
       govPortals={{
         title: "מערכות תשלום ודיווחי מע\"מ ומקדמות",
         links: [
-
-          { label: "דיווח חשבוניות ישראל (חוק צמצום המזומן)", href: "https://www.gov.il/he/departments/israel_tax_authority" },
-
-          
+          { label: "רשות המסים – מע\"מ, חשבוניות ישראל ומקדמות", href: "https://www.gov.il/he/departments/israel_tax_authority" },
+          { label: "המוסד לביטוח לאומי – פורטל מעסיקים ודיווחים", href: "https://www.btl.gov.il" },
         ],
       }}
       faqs={FAQS}

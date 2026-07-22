@@ -208,8 +208,8 @@ export const Route = createFileRoute("/tax-consulting")({
       govPortals={{
         title: "מאגרי מידע, מע\"מ, פסיקה וטפסים",
         links: [
-          { label: "מאגר החלטות מיסוי (Pre-Rulings) רשמי", href: "https://www.gov.il/he/departments/israel_tax_authority" },
-
+          { label: "רשות המסים – החלטות מיסוי, מדריכים וטפסים", href: "https://www.gov.il/he/departments/israel_tax_authority" },
+          { label: "משרד העלייה והקליטה – הטבות מס לתושבים חוזרים ועולים", href: "https://www.gov.il/he/departments/ministry_of_aliyah_and_integration" },
         ],
       }}
       faqs={FAQS}
