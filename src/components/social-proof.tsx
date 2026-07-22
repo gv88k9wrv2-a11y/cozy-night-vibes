@@ -1,4 +1,4 @@
-import { Award, CalendarDays, ExternalLink, Globe2, Star, UserCheck } from "lucide-react";
+import { CalendarDays, ExternalLink, Globe2, Star, UserCheck } from "lucide-react";
 
 type Lang = "he" | "en";
 
@@ -8,8 +8,7 @@ const COPY = {
     credTitle: "משרד ותיק עם רקורד אמיתי",
     credSub: "המספרים והעובדות מדברים בעד עצמם – ללא הבטחות שיווקיות.",
     facts: [
-      { icon: CalendarDays, label: "פעילים משנת 2000" },
-      { icon: Award, label: "מעל 25 שנות ניסיון מקצועי" },
+      { icon: CalendarDays, label: "פעילים משנת 2000 – מעל 25 שנות ניסיון" },
       { icon: UserCheck, label: "בהובלת רו״ח שלמה נמרודי" },
       { icon: Globe2, label: "ליווי חברות, סטארטאפים ופעילות בינלאומית" },
     ],
@@ -28,8 +27,7 @@ const COPY = {
     credTitle: "An established firm with a real track record",
     credSub: "Facts, not marketing claims.",
     facts: [
-      { icon: CalendarDays, label: "Operating since 2000" },
-      { icon: Award, label: "25+ years of professional experience" },
+      { icon: CalendarDays, label: "Established in 2000 – 25+ years of experience" },
       { icon: UserCheck, label: "Led by CPA Shlomo Nimrodi" },
       { icon: Globe2, label: "Serving companies, startups & international clients" },
     ],
