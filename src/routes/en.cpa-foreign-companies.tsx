@@ -73,7 +73,7 @@ export const Route = createFileRoute("/en/cpa-foreign-companies")({
             "Monthly payslips compliant with Israeli labor law",
             "Pension, severance and study fund contributions",
             "Reporting to Bituach Leumi and income tax withholding",
-            "Executive compensation, options (Section 102) and equity awards",
+            "Executive compensation, options (Section 102 – Equity & ESOP Incentive Plans) and equity awards",
             "Termination, severance settlements and Form 161 filings",
             "Global payroll coordination with parent HR systems",
           ],
