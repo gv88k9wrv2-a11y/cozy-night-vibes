@@ -8,7 +8,7 @@ export const Route = createFileRoute("/en/privacy-policy")({
       {
         name: "description",
         content:
-          "Privacy policy of Nimrodi & Co. CPA. Inquiries submitted through this website are confidential, encrypted and never shared with third parties. Full professional secrecy.",
+          "Privacy policy of Nimrodi & Co. CPA: website inquiries are confidential, encrypted and never shared with third parties. Full professional secrecy.",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:title", content: "Privacy Policy | Nimrodi & Co. CPA" },
