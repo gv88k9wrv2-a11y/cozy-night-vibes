@@ -422,7 +422,7 @@ export function SiteFooter() {
               </li>
             ))}
             <li><Link to="/accessibility" className="hover:text-gold">הצהרת נגישות</Link></li>
-            <li><a href="/privacy-policy" className="hover:text-gold">מדיניות פרטיות</a></li>
+            <li><Link to="/privacy-policy" className="hover:text-gold">מדיניות פרטיות</Link></li>
           </ul>
         </div>
 
