@@ -3,7 +3,7 @@ import { CheckCircle2, Loader2, Mail, MessageCircle, Send, ShieldCheck } from "l
 
 type Lang = "he" | "en";
 
-const RECIPIENT = "oren@nimrodi.co.il";
+const RECIPIENT = "office@nimrodi.co.il";
 const WHATSAPP_NUMBER = "972546688681";
 
 const COPY = {
@@ -26,7 +26,7 @@ const COPY = {
     required: "*",
     successTitle: "פנייתך מוכנה לשליחה",
     successText:
-      "נפתחה עבורך אפליקציית הדוא״ל עם הפרטים לשליחה ל-oren@nimrodi.co.il. אם היא לא נפתחה, ניתן לפנות אלינו בוואטסאפ.",
+      "נפתחה עבורך אפליקציית הדוא״ל עם הפרטים לשליחה ל-office@nimrodi.co.il. אם היא לא נפתחה, ניתן לפנות אלינו בוואטסאפ.",
     successCta: "לשליחת פנייה נוספת",
     successWhats: "המשך בוואטסאפ",
     errors: {
@@ -58,7 +58,7 @@ const COPY = {
     required: "*",
     successTitle: "Your inquiry is ready to send",
     successText:
-      "Your email app just opened with the details pre-filled for oren@nimrodi.co.il. If it didn't open, reach us on WhatsApp instead.",
+      "Your email app just opened with the details pre-filled for office@nimrodi.co.il. If it didn't open, reach us on WhatsApp instead.",
     successCta: "Send another inquiry",
     successWhats: "Continue on WhatsApp",
     errors: {
@@ -155,7 +155,7 @@ export function LeadForm({ lang = "he" }: { lang?: Lang }) {
     setLastWhatsAppUrl(wa);
 
     await new Promise((r) => setTimeout(r, 500));
-    // Open the user's mail client to send to oren@nimrodi.co.il
+    // Open the user's mail client to send to office@nimrodi.co.il
     window.location.href = mailto;
 
     setSubmitting(false);
