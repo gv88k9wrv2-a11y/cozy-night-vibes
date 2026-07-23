@@ -1,0 +1,37 @@
+# Nimrodi & Co. - Complete 301 Redirects Mapping
+
+/relocation-tax-advice               /cpa-international     301
+
+/international-taxation              /cpa-international     301
+
+/tax-return-submission               /tax-consulting        301
+
+/deductible-expenses-2025            /tax-consulting        301
+
+/rental-income-tax                   /tax-consulting        301
+
+/new-immigrants-tax-benefits         /cpa-international     301
+
+/fractional-cfo-startups             /fractional-cfo        301
+
+/startup-fundraising                 /cpa-startups          301
+
+/business-valuation                  /services              301
+
+/corporate-financial-statements       /audit                301
+
+/financial-expert-opinion            /services              301
+
+/crypto-tax-reporting                /blog/crypto-reporting 301
+
+/annual-reports-wealth-statement     /tax-consulting      301
+
+/payroll-audit-termination           /payroll               301
+
+/payroll-management                  /payroll               301
+
+/opening-tax-accounts                /bookkeeping           301
+
+/business-registration-authorities   /bookkeeping           301
+
+/en/auditing-accounting-herzliya     /en/services          301
