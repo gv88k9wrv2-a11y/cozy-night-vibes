@@ -92,37 +92,44 @@ export const Route = createFileRoute("/")({
 
 const SERVICES = [
   {
+    to: "/cpa-startups",
     icon: Building2,
     title: "חברות וסטארטאפים",
     desc: "ליווי חשבונאי מלא לחברות טכנולוגיה, סטארטאפים ועסקים בצמיחה – דוחות כספיים, ביקורת ודיווח.",
   },
   {
+    to: "/cpa-freelancers",
     icon: Briefcase,
     title: "עצמאים ופרילנסרים",
     desc: "פתיחת תיקים, דיווחים שוטפים, דוחות שנתיים והצהרות הון – עם שקיפות ושירות אישי.",
   },
   {
+    to: "/fractional-cfo",
     icon: TrendingUp,
     title: "גיוסי הון וליווי פיננסי",
     desc: "ליווי בגיוס ממשקיעים, קרנות ובנקים, הכנה להנפקות ובניית תשתית פיננסית לצמיחה.",
   },
   {
+    to: "/fractional-cfo",
     icon: Calculator,
     title: "שירותי חשבות וניהול כספים",
     desc: "ניהול תזרים, בקרה תקציבית ודוחות מנהלים – כמו CFO חיצוני לחברה שלכם.",
   },
   {
+    to: "/cpa-international",
     icon: Globe2,
     title: "ייעוץ מס בינלאומי",
     desc: "התאמה למס בינלאומי, דיווחי חו״ל, ניתוק תושבות, רילוקיישן ועולים חדשים.",
   },
   {
+    to: "/tax-consulting",
     icon: FileSpreadsheet,
     title: "ייעוץ מס ודיווחים מיוחדים",
     desc: "התמחות מיוחדת במיסוי מטבעות דיגיטליים, ליווי עסקאות קריפטו מורכבות, עבודה מול בנקים ישראלים להכנסת כספי קריפטו, והגשת דוחות מותאמים לרשות המסים. בנוסף: הכנסות משכירות, שוק ההון, גילוי מרצון וחוות דעת חשבונאיות.",
     badge: "מומחיות קריפטו",
   },
-];
+] as const;
+
 
 const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/jxWz9287qp3QRVFg8";
 
@@ -237,26 +244,35 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map(({ icon: Icon, title, desc, badge }) => (
-              <article
-                key={title}
-                className="group relative overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
-              >
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                    <Icon className="h-5 w-5" aria-hidden />
+            {SERVICES.map((s) => {
+              const Icon = s.icon;
+              const badge = "badge" in s ? s.badge : undefined;
+              return (
+                <Link
+                  key={s.title}
+                  to={s.to}
+                  className="group relative block overflow-hidden rounded-xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
+                >
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                      <Icon className="h-5 w-5" aria-hidden />
+                    </div>
+                    {badge && (
+                      <span className="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold">
+                        ✦ {badge}
+                      </span>
+                    )}
                   </div>
-                  {badge && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-gold">
-                      ✦ {badge}
-                    </span>
-                  )}
-                </div>
-                <h3 className="font-display text-xl font-semibold text-primary">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-right scale-x-0 bg-gold transition group-hover:scale-x-100" />
-              </article>
-            ))}
+                  <h3 className="font-display text-xl font-semibold text-primary">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold">
+                    למידע נוסף ←
+                  </span>
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-right scale-x-0 bg-gold transition group-hover:scale-x-100" />
+                </Link>
+              );
+            })}
+
           </div>
 
           <div className="mt-10 text-center">
