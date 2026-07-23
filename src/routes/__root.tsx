@@ -206,9 +206,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         type: "application/ld+json",
-        "data-schema": "accounting-service",
         children: JSON.stringify(ACCOUNTING_SERVICE_JSONLD),
-      } as unknown as { type: string; children: string },
+      },
+
       ...(GA_ENABLED
 
         ? [
