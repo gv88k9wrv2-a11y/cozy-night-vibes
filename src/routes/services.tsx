@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Briefcase,
-  Building2,
   Calculator,
   ChartLine,
   FileSearch,
