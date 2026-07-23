@@ -32,52 +32,96 @@ function AccessibilityPage() {
       <SiteHeader />
 
       <main id="main-content">
-      <section className="border-b border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
-          <h1 className="font-display text-4xl font-bold text-primary sm:text-5xl">
-            הצהרת נגישות
-          </h1>
-        </div>
-      </section>
+        <section className="border-b border-border/60 bg-secondary/40">
+          <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+            <h1 className="font-display text-4xl font-bold text-primary sm:text-5xl">
+              הצהרת נגישות
+            </h1>
+            <p className="mt-4 text-muted-foreground">
+              עודכן לאחרונה: יולי 2026
+            </p>
+          </div>
+        </section>
 
-      <section className="py-16">
-        <div className="mx-auto max-w-3xl space-y-6 px-4 text-muted-foreground sm:px-6">
-          <p>
-            משרד רואי החשבון נמרודי ושות׳ רואה בנגישות ערך מרכזי ופועל להנגיש את
-            אתר האינטרנט שלו לכלל הציבור, לרבות אנשים עם מוגבלות, בהתאם לחוק
-            שוויון זכויות לאנשים עם מוגבלות, התשנ״ח-1998 ותקנותיו.
-          </p>
-          <h2 className="pt-4 font-display text-xl font-bold text-primary">
-            רמת הנגישות באתר
-          </h2>
-          <p>
-            האתר נבנה ברמת עמידה AA של תקן WCAG 2.1 של ארגון W3C. האתר כולל תמיכה
-            בקוראי מסך, ניווט מלא באמצעות מקלדת, טקסטים חלופיים לתמונות, ניגודיות
-            צבעים תקנית, וטקסט בגודל שניתן להגדלה.
-          </p>
-          <h2 className="pt-4 font-display text-xl font-bold text-primary">
-            פנייה בנושא נגישות
-          </h2>
-          <p>
-            אם נתקלתם באלמנט לא נגיש או שקיים אצלכם קושי לגלוש באתר, נשמח לקבל
-            פנייה ולתקן בהקדם:
-          </p>
-          <ul className="list-inside list-disc space-y-1">
-            <li>טלפון: <a href="tel:099582211" className="text-primary hover:text-gold">09-9582211</a></li>
-            <li>וואטסאפ: 054-6688681</li>
-            <li>
-              דוא״ל:{" "}
-              <a href="mailto:office@nimrodi.co.il" className="font-semibold text-primary hover:text-gold">
-                office@nimrodi.co.il
-              </a>
-            </li>
-          </ul>
-          <p className="pt-4 text-sm">
-            הצהרה זו עודכנה לאחרונה בחודש נובמבר 2026.
-          </p>
-        </div>
-      </section>
+        <section className="py-16">
+          <div className="mx-auto max-w-3xl space-y-8 px-4 text-muted-foreground leading-relaxed sm:px-6">
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-bold text-primary">
+                1. מחויבות לנגישות
+              </h2>
+              <p>
+                משרד רואי החשבון נמרודי ושות׳ רואה בנגישות ערך מרכזי, מוסרי ומקצועי. המשרד פועל להנגשת אתר האינטרנט ושירותיו לכלל הציבור, לרבות אנשים עם מוגבלות, בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות, התשנ״ח-1998 ותקנות הנגישות לשירות.
+              </p>
+            </div>
 
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-bold text-primary">
+                2. נגישות אתר האינטרנט (נגישות דיגיטלית)
+              </h2>
+              <p>
+                האתר הונגש בהתאם לתקן הישראלי (ת״י 5568) לנגישות תכנים באינטרנט ברמת AA ובהתאם להנחיות מסמך WCAG 2.1 של ארגון W3C הבינלאומי.
+              </p>
+              <ul className="list-inside list-disc space-y-2 pr-4">
+                <li><strong>ניווט מקלדת:</strong> תמיכה מלאה בתוספי ניווט באמצעות המקלדת (Tab, Shift+Tab, Enter).</li>
+                <li><strong>התאמה לקוראי מסך:</strong> האתר נבנה עם מבנה סמנטי ומאפייני ARIA המותאמים לטכנולוגיות מסייעות.</li>
+                <li><strong>עיצוב וטקסט:</strong> ניגודיות צבעים תקנית, אפשרות להגדלת טקסטים ללא פגיעה במבנה האתר, וטקסט חלופי (Alt) לתמונות ורכיבים ויזואליים.</li>
+                <li><strong>רספונסיביות:</strong> התאמה מלאה לגלישה במגוון מסכים, מובייל וטאבלטים.</li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-bold text-primary">
+                3. הסדרי נגישות פיזיים במשרד
+              </h2>
+              <p>
+                המשרד ממוקם ברחוב גלגלי הפלדה 16, הרצליה פיתוח. להלן פירוט הסדרי הנגישות במבנה:
+              </p>
+              <ul className="list-inside list-disc space-y-2 pr-4">
+                <li><strong>חניית נכים:</strong> קיימות חניות נכים מסומנות בחניון הבניין ובקרבתו.</li>
+                <li><strong>גישה לבניין ולמשרדים:</strong> רצף גישה נגיש מהחניה, דרך כניסת הבניין והלובי, ועד למשרדי הפירמה דרך מעליות מונגשות.</li>
+                <li><strong>שירותים נגישים:</strong> במבנה קיימים שירותי נכים מונגשים ומאושרים.</li>
+                <li><strong>חיות שירות:</strong> מותרת הכניסה לכלבי נחייה וחיות שירות.</li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-bold text-primary">
+                4. רכז נגישות, פניות והצעות לשיפור
+              </h2>
+              <p>
+                אנו ממשיכים במאמצים לשפר את נגישות האתר והשירות במשרד. אם נתקלתם ברכיב לא נגיש, בקושי בגלישה באתר, או אם ברצונכם לבקש התאמת נגישות מיוחדת לקראת פגישה במשרדינו, נשמח לעמוד לרשותכם:
+              </p>
+              <div className="rounded-lg border border-border/60 bg-secondary/30 p-6 space-y-3">
+                <p><strong>רכז/ת נגישות המשרד:</strong> צוות נגישות – נמרודי ושות׳</p>
+                <p>
+                  <strong>טלפון:</strong>{" "}
+                  <a href="tel:099582211" className="text-primary hover:text-gold hover:underline">
+                    09-9582211
+                  </a>
+                </p>
+                <p>
+                  <strong>וואטסאפ:</strong>{" "}
+                  <a href="https://wa.me/972546688681" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-gold hover:underline">
+                    054-6688681
+                  </a>
+                </p>
+                <p>
+                  <strong>דוא״ל:</strong>{" "}
+                  <a href="mailto:office@nimrodi.co.il" className="text-primary hover:text-gold hover:underline">
+                    office@nimrodi.co.il
+                  </a>
+                </p>
+              </div>
+              <p>
+                כל פנייה מטופלת ברצינות ובמהירות המרבית על מנת לספק את המענה המיטבי.
+              </p>
+            </div>
+
+            <p className="pt-4 text-sm text-muted-foreground/80">
+              הצהרה זו עודכנה לאחרונה בחודש יולי 2026.
+            </p>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
