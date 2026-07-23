@@ -180,6 +180,3 @@ function ServicesPage() {
     </div>
   );
 }
-
-// Building2 kept as icon fallback if needed elsewhere
-export const _iconGuard = Building2;
