@@ -248,6 +248,26 @@ function RootComponent() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const origin = window.location.origin;
+    if (origin === DEFAULT_ORIGIN) return;
+    document.querySelectorAll<HTMLScriptElement>('script[type="application/ld+json"]').forEach((el) => {
+      if (!el.textContent?.includes("AccountingService")) return;
+      try {
+        const data = JSON.parse(el.textContent) as Record<string, unknown>;
+        if (data["@type"] !== "AccountingService") return;
+        data.url = origin;
+        data["@id"] = `${origin}/#website`;
+        data.image = `${origin}/og-image.jpg`;
+        el.textContent = JSON.stringify(data);
+      } catch {
+        /* ignore */
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+
     if (!GA_ENABLED || typeof window === "undefined") return;
     const w = window as unknown as { gtag?: (...args: unknown[]) => void; dataLayer?: unknown[] };
     const page_path = window.location.pathname + window.location.search;
