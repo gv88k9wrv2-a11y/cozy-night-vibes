@@ -110,13 +110,6 @@ function TeamPage() {
                 >
                   <Mail className="h-4 w-4" aria-hidden />
                 </a>
-                <a
-                  href="#"
-                  aria-label="LinkedIn"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-gold hover:text-gold"
-                >
-                  <Linkedin className="h-4 w-4" aria-hidden />
-                </a>
               </div>
             </article>
           ))}
