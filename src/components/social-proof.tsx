@@ -45,6 +45,14 @@ const COPY = {
 
 const REVIEW_SOURCES = [
   {
+    name: "Google Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99+%D7%95%D7%A9%D7%95%D7%AA+%D7%A8%D7%95%D7%90%D7%99+%D7%97%D7%A9%D7%91%D7%95%D7%9F+%D7%92%D7%9C%D7%92%D7%9C%D7%99+%D7%94%D7%A4%D7%9C%D7%93%D7%94+%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94",
+    description: {
+      he: "צפו בביקורות שלנו ב-Google Maps – פרופיל העסק הרשמי של נמרודי ושות׳ רואי חשבון.",
+      en: "View our Google Maps reviews – the official Google Business Profile of Nimrodi & Co. CPAs.",
+    },
+  },
+  {
     name: "Easy.co.il",
     href: "https://easy.co.il/page/2735913",
     description: {
