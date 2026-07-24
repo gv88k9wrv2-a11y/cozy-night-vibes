@@ -5,7 +5,7 @@ import { BLOG_POSTS } from "../data/blog-posts";
 
 export const POSTS = BLOG_POSTS;
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "בלוג מקצועי | נמרודי ושות׳ – רואי חשבון בהרצליה" },

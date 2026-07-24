@@ -25,12 +25,12 @@ import { Route as CpaFreelancersRouteImport } from './routes/cpa-freelancers'
 import { Route as CpaForeignCompaniesRouteImport } from './routes/cpa-foreign-companies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookkeepingRouteImport } from './routes/bookkeeping'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as EnTeamRouteImport } from './routes/en.team'
 import { Route as EnTaxConsultingRouteImport } from './routes/en.tax-consulting'
 import { Route as EnServicesRouteImport } from './routes/en.services'
@@ -130,11 +130,6 @@ const BookkeepingRoute = BookkeepingRouteImport.update({
   path: '/bookkeeping',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AuditRoute = AuditRouteImport.update({
   id: '/audit',
   path: '/audit',
@@ -159,6 +154,11 @@ const EnIndexRoute = EnIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => EnRoute,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EnTeamRoute = EnTeamRouteImport.update({
   id: '/team',
@@ -246,9 +246,9 @@ const EnAboutRoute = EnAboutRouteImport.update({
   getParentRoute: () => EnRoute,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -256,7 +256,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
   '/audit': typeof AuditRoute
-  '/blog': typeof BlogRouteWithChildren
   '/bookkeeping': typeof BookkeepingRoute
   '/contact': typeof ContactRoute
   '/cpa-foreign-companies': typeof CpaForeignCompaniesRoute
@@ -291,6 +290,7 @@ export interface FileRoutesByFullPath {
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en/team': typeof EnTeamRoute
+  '/blog/': typeof BlogIndexRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
@@ -298,7 +298,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
   '/audit': typeof AuditRoute
-  '/blog': typeof BlogRouteWithChildren
   '/bookkeeping': typeof BookkeepingRoute
   '/contact': typeof ContactRoute
   '/cpa-foreign-companies': typeof CpaForeignCompaniesRoute
@@ -332,6 +331,7 @@ export interface FileRoutesByTo {
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en/team': typeof EnTeamRoute
+  '/blog': typeof BlogIndexRoute
   '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
@@ -340,7 +340,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
   '/audit': typeof AuditRoute
-  '/blog': typeof BlogRouteWithChildren
   '/bookkeeping': typeof BookkeepingRoute
   '/contact': typeof ContactRoute
   '/cpa-foreign-companies': typeof CpaForeignCompaniesRoute
@@ -375,6 +374,7 @@ export interface FileRoutesById {
   '/en/services': typeof EnServicesRoute
   '/en/tax-consulting': typeof EnTaxConsultingRoute
   '/en/team': typeof EnTeamRoute
+  '/blog/': typeof BlogIndexRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
@@ -384,7 +384,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/accessibility'
     | '/audit'
-    | '/blog'
     | '/bookkeeping'
     | '/contact'
     | '/cpa-foreign-companies'
@@ -419,6 +418,7 @@ export interface FileRouteTypes {
     | '/en/services'
     | '/en/tax-consulting'
     | '/en/team'
+    | '/blog/'
     | '/en/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -426,7 +426,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/accessibility'
     | '/audit'
-    | '/blog'
     | '/bookkeeping'
     | '/contact'
     | '/cpa-foreign-companies'
@@ -460,6 +459,7 @@ export interface FileRouteTypes {
     | '/en/services'
     | '/en/tax-consulting'
     | '/en/team'
+    | '/blog'
     | '/en'
   id:
     | '__root__'
@@ -467,7 +467,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/accessibility'
     | '/audit'
-    | '/blog'
     | '/bookkeeping'
     | '/contact'
     | '/cpa-foreign-companies'
@@ -502,6 +501,7 @@ export interface FileRouteTypes {
     | '/en/services'
     | '/en/tax-consulting'
     | '/en/team'
+    | '/blog/'
     | '/en/'
   fileRoutesById: FileRoutesById
 }
@@ -510,7 +510,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AccessibilityRoute: typeof AccessibilityRoute
   AuditRoute: typeof AuditRoute
-  BlogRoute: typeof BlogRouteWithChildren
   BookkeepingRoute: typeof BookkeepingRoute
   ContactRoute: typeof ContactRoute
   CpaForeignCompaniesRoute: typeof CpaForeignCompaniesRoute
@@ -527,6 +526,8 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TaxConsultingRoute: typeof TaxConsultingRoute
   TeamRoute: typeof TeamRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -643,13 +644,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookkeepingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/audit': {
       id: '/audit'
       path: '/audit'
@@ -684,6 +678,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/en/'
       preLoaderRoute: typeof EnIndexRouteImport
       parentRoute: typeof EnRoute
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/en/team': {
       id: '/en/team'
@@ -806,23 +807,13 @@ declare module '@tanstack/react-router' {
     }
     '/blog/$slug': {
       id: '/blog/$slug'
-      path: '/$slug'
+      path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface BlogRouteChildren {
-  BlogSlugRoute: typeof BlogSlugRoute
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
-  BlogSlugRoute: BlogSlugRoute,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface EnRouteChildren {
   EnAboutRoute: typeof EnAboutRoute
@@ -873,7 +864,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AccessibilityRoute: AccessibilityRoute,
   AuditRoute: AuditRoute,
-  BlogRoute: BlogRouteWithChildren,
   BookkeepingRoute: BookkeepingRoute,
   ContactRoute: ContactRoute,
   CpaForeignCompaniesRoute: CpaForeignCompaniesRoute,
@@ -890,6 +880,8 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TaxConsultingRoute: TaxConsultingRoute,
   TeamRoute: TeamRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
