@@ -164,18 +164,16 @@ export const Route = createFileRoute("/tax-consulting")({
           title: "מיסוי קריפטו ונכסים דיגיטליים",
           body: (
             <>
-              רשות המסים מסווגת ביטקוין, אתריום ומטבעות דיגיטליים כנכס לצורכי מס – כל מכירה, המרה בין מטבעות או שימוש בקנייה מהווים אירוע מס. אנחנו מהמשרדים המובילים בישראל בטיפול בנכסים דיגיטליים, DeFi, NFT וסטייקינג – כולל הכנת דוחות מוסמכים והעברת כספים למערכת הבנקאית תוך עמידה מלאה במדיניות בנק ישראל. לפעילות עם היבט חוצה-גבולות ראו גם <Link to="/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ייעוץ מיסוי בינלאומי</Link>, וסוחרי קריפטו עצמאים – <Link to="/cpa-freelancers" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">רו״ח לעצמאים ופרילנסרים</Link>:
+              רשות המסים מסווגת מטבעות דיגיטליים כנכס לצורכי מס – מכירה, המרה או שימוש עשויים להוות אירוע מס. אנו מספקים ייעוץ מס, תיעוד והכנת מידע תומך ביחס לנכסים דיגיטליים ולמקור כספים, לרבות הכנת מסמכים להצגה בפני מוסדות פיננסיים בהתאם לדרישותיהם ולדין הרלוונטי. לפעילות עם היבט חוצה-גבולות ראו גם <Link to="/cpa-international" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">ייעוץ מיסוי בינלאומי</Link>, וסוחרי קריפטו עצמאים – <Link to="/cpa-freelancers" className="text-primary underline decoration-gold/60 underline-offset-4 hover:decoration-gold">רו״ח לעצמאים ופרילנסרים</Link>:
             </>
           ),
           bullets: [
-            "דוח רווח והפסד מלא מ-Blockchain: Binance, Coinbase, Kraken, KuCoin, MetaMask",
-            "חישוב רווח הון ריאלי לפי שיטת FIFO/LIFO ובשער חליפין ליום העסקה",
+            "הכנת דוח רווח והפסד מבורסות ו-Wallets מרכזיים",
+            "חישוב רווח הון לפי שיטת FIFO/LIFO ובשער חליפין ליום העסקה",
             "טיפול ב-DeFi: Liquidity Mining, Yield Farming, Lending, Airdrops",
-            "מיסוי NFT: יצירה, מכירה ראשונית, שוק משני ותמלוגים",
-            "מיסוי סטייקינג (Staking) ו-Mining – הכנסה שוטפת מול רווח הון",
-            "החלטת מיסוי מקדמית לפעילות סוחר קריפטו (עסק) מול משקיע (הון)",
-            "הליכי AML/KYC והעברת מזומן מקריפטו לבנק ישראלי – ליווי מלא",
-            "פרישת רווחי קריפטו לפי הנחיות רשות המסים 05/2018 ועדכונים",
+            "מיסוי NFT, סטייקינג ו-Mining – הכנסה שוטפת מול רווח הון",
+            "אפשרות לבחון החלטת מיסוי מקדמית בסיווג פעילות (עסק מול הון)",
+            "תיעוד AML/KYC ומסמכי מקור כספים להצגה בפני גורמים פיננסיים",
           ],
         },
         {
