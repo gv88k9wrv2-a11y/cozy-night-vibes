@@ -56,7 +56,7 @@ function TeamEn() {
 
 
         <section className="py-16">
-          <div className="mx-auto grid max-w-5xl gap-6 px-4 sm:px-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-5xl gap-6 px-4 sm:px-6 md:max-w-md">
             {TEAM.map((m) => (
               <article key={m.name} className="rounded-xl border border-border bg-card p-6">
                 <h2 className="font-display text-xl font-bold text-primary">{m.name}</h2>
