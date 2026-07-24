@@ -128,12 +128,11 @@ export function ExecutiveTestimonials({ lang = "he" }: { lang?: Lang }) {
               key={src.href}
               className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
             >
-              <div className="flex items-center gap-2 text-gold" aria-hidden>
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
+              <div className="flex items-center gap-1.5 text-gold" aria-hidden>
+                <Star className="h-4 w-4" />
+                <span className="text-xs font-semibold uppercase tracking-wider">
+                  {src.name}
+                </span>
               </div>
               <h3 className="mt-4 font-display text-lg font-bold text-primary">{src.name}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
