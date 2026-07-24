@@ -122,7 +122,7 @@ export function ExecutiveTestimonials({ lang = "he" }: { lang?: Lang }) {
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t.reviewsSub}</p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {REVIEW_SOURCES.map((src) => (
             <article
               key={src.href}
