@@ -24,12 +24,13 @@ import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-pr
 import heroImage from "../assets/hero-office.webp";
 
 const BASE = "https://cpa-test-1.lovable.app";
-const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/jxWz9287qp3QRVFg8";
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/search/?api=1&query=%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99+%D7%95%D7%A9%D7%95%D7%AA+%D7%A8%D7%95%D7%90%D7%99+%D7%97%D7%A9%D7%91%D7%95%D7%9F+%D7%92%D7%9C%D7%92%D7%9C%D7%99+%D7%94%D7%A4%D7%9C%D7%93%D7%94+%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94";
 
 const HIGHLIGHTS = [
   { icon: Award, num: "25+", label: "Years of experience" },
-  { icon: Star, num: "5.0", label: "Google rating", href: GOOGLE_REVIEWS_URL },
-  { icon: Users, num: "80+", label: "Client reviews", href: GOOGLE_REVIEWS_URL },
+  { icon: Star, num: "★", label: "Google Maps reviews", href: GOOGLE_REVIEWS_URL },
+  { icon: Users, num: "✓", label: "Public client reviews", href: GOOGLE_REVIEWS_URL },
   { icon: Handshake, num: "✦", label: "Direct, Personal Service" },
 ];
 

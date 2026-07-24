@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { FloatingWhatsApp, SiteFooter, SiteHeader, WHATSAPP_URL } from "../components/site-chrome";
 import { GovPortalLinks } from "../components/gov-portal-links";
-import { ProcessSection, TestimonialsSection, WhyUsSection } from "../components/home-sections";
+import { ProcessSection, WhyUsSection } from "../components/home-sections";
 import { ClientLogosStrip, ExecutiveTestimonials } from "../components/social-proof";
 import heroImage from "../assets/hero-office.webp";
 
@@ -131,12 +131,13 @@ const SERVICES = [
 ] as const;
 
 
-const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/jxWz9287qp3QRVFg8";
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/search/?api=1&query=%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99+%D7%95%D7%A9%D7%95%D7%AA+%D7%A8%D7%95%D7%90%D7%99+%D7%97%D7%A9%D7%91%D7%95%D7%9F+%D7%92%D7%9C%D7%92%D7%9C%D7%99+%D7%94%D7%A4%D7%9C%D7%93%D7%94+%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94";
 
 const HIGHLIGHTS = [
   { icon: Award, num: "25+", label: "שנות ניסיון" },
-  { icon: Star, num: "5.0", label: "דירוג בגוגל", href: GOOGLE_REVIEWS_URL },
-  { icon: Users, num: "80+", label: "המלצות לקוחות", href: GOOGLE_REVIEWS_URL },
+  { icon: Star, num: "★", label: "ביקורות ב-Google", href: GOOGLE_REVIEWS_URL },
+  { icon: Users, num: "✓", label: "חוות דעת ציבוריות", href: GOOGLE_REVIEWS_URL },
   { icon: Handshake, num: "✦", label: "ליווי אישי ומעורבות שותף" },
 ];
 
@@ -353,15 +354,15 @@ function HomePage() {
                 </div>
                 <div className="border-t border-primary-foreground/10 p-6">
                   <Star className="mb-3 h-6 w-6 text-gold" aria-hidden />
-                  <div className="font-display text-3xl font-bold">5.0★</div>
+                  <div className="font-display text-2xl font-bold">Google</div>
                   <div className="text-sm text-primary-foreground/70">
                     <a
-                      href="https://maps.app.goo.gl/jxWz9287qp3QRVFg8"
+                      href={GOOGLE_REVIEWS_URL}
                       target="_blank"
-                      rel="noopener"
+                      rel="noopener noreferrer"
                       className="hover:text-gold"
                     >
-                      ביקורות ב־Google
+                      צפו בביקורות שלנו ב-Google Maps
                     </a>
                   </div>
                 </div>
@@ -371,7 +372,7 @@ function HomePage() {
         </div>
       </section>
 
-      <TestimonialsSection />
+      
       <ExecutiveTestimonials lang="he" />
 
 

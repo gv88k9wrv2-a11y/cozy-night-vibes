@@ -111,17 +111,19 @@ function AboutPage() {
             </div>
             <div className="mt-6 rounded-xl border border-gold/40 bg-gold/10 p-6">
               <Star className="mb-2 h-6 w-6 text-gold" aria-hidden />
-              <div className="font-display text-2xl font-bold text-primary">5.0 ★★★★★</div>
+              <div className="font-display text-lg font-bold text-primary">
+                ביקורות וחוות דעת ב-Google
+              </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                דירוג מושלם בביקורות Google מלקוחות המשרד.
+                מעוניינים להתרשם? ניתן לעיין בביקורות הציבוריות של המשרד ב-Google Maps.
               </p>
               <a
-                href="https://maps.app.goo.gl/jxWz9287qp3QRVFg8"
+                href="https://www.google.com/maps/search/?api=1&query=%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99+%D7%95%D7%A9%D7%95%D7%AA+%D7%A8%D7%95%D7%90%D7%99+%D7%97%D7%A9%D7%91%D7%95%D7%9F+%D7%92%D7%9C%D7%92%D7%9C%D7%99+%D7%94%D7%A4%D7%9C%D7%93%D7%94+%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="mt-3 inline-block text-sm font-semibold text-primary hover:text-gold"
               >
-                לצפייה בביקורות ←
+                צפו בביקורות שלנו ב-Google Maps ←
               </a>
             </div>
           </aside>

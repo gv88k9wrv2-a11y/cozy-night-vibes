@@ -4,7 +4,6 @@ import {
   FileSearch2,
   HandCoins,
   MessageSquareHeart,
-  Quote,
   Rocket,
   ShieldCheck,
   Sparkles,
@@ -19,26 +18,6 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "משרד יסודי, זמין ומקצועי בצורה יוצאת דופן. ליווה אותנו לאורך שלושה סבבי גיוס וההבדל בין לפני ואחרי נמרודי היה מיידי.",
-    name: "מייסד ומנכ״ל",
-    role: "חברת SaaS ישראלית",
-  },
-  {
-    quote:
-      "כעצמאית, הייתי אבודה בין הדיווחים והתשלומים. שלמה והצוות עשו לי סדר, חסכו לי מס והפכו את הנושא למשהו שאני מבינה.",
-    name: "פרילנסרית",
-    role: "יועצת שיווק דיגיטלי",
-  },
-  {
-    quote:
-      "עברנו רילוקיישן לאירופה עם הכנסות משני מקומות. הליווי היה מדויק, בזמן, וללא הפתעות מול רשויות המס.",
-    name: "לקוח פרטי",
-    role: "מיסוי בינלאומי",
-  },
-];
 
 const WHY_US = [
   {
@@ -108,7 +87,7 @@ export function WhyUsSection() {
             שישה יתרונות שהופכים אותנו למשרד שנשארים אתו
           </h2>
           <p className="mt-4 text-muted-foreground">
-            לא מקרה שרוב הלקוחות שלנו מגיעים בהמלצה. הנה מה שגורם להם להישאר.
+            לקוחות בוחרים בנו בזכות שילוב של מקצועיות, זמינות וליווי אישי לאורך זמן.
           </p>
         </motion.div>
 
@@ -170,51 +149,3 @@ export function ProcessSection() {
   );
 }
 
-export function TestimonialsSection() {
-  return (
-    <section className="py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <motion.div {...fadeUp} className="mx-auto max-w-2xl text-center">
-          <div className="text-sm font-semibold uppercase tracking-widest text-gold">
-            לקוחות מספרים
-          </div>
-          <h2 className="mt-3 font-display text-3xl font-bold text-primary sm:text-4xl">
-            עדויות של לקוחות מרוצים
-          </h2>
-        </motion.div>
-
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <motion.figure
-              key={i}
-              {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-              className="relative rounded-2xl border border-border bg-card p-7 shadow-sm"
-            >
-              <Quote className="absolute -top-3 right-6 h-8 w-8 rounded-full bg-gold p-1.5 text-gold-foreground" aria-hidden />
-              <blockquote className="text-sm leading-relaxed text-foreground">
-                „{t.quote}"
-              </blockquote>
-              <figcaption className="mt-6 border-t border-border pt-4">
-                <div className="font-display text-base font-semibold text-primary">{t.name}</div>
-                <div className="text-xs text-muted-foreground">{t.role}</div>
-              </figcaption>
-            </motion.figure>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center text-sm text-muted-foreground">
-          דירוג 5.0★ בגוגל ·{" "}
-          <a
-            href="https://maps.app.goo.gl/jxWz9287qp3QRVFg8"
-            target="_blank"
-            rel="noopener"
-            className="font-semibold text-primary underline-offset-4 hover:text-gold hover:underline"
-          >
-            צפו בביקורות המלאות
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}

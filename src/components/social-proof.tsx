@@ -45,6 +45,14 @@ const COPY = {
 
 const REVIEW_SOURCES = [
   {
+    name: "Google Maps",
+    href: "https://www.google.com/maps/search/?api=1&query=%D7%A0%D7%9E%D7%A8%D7%95%D7%93%D7%99+%D7%95%D7%A9%D7%95%D7%AA+%D7%A8%D7%95%D7%90%D7%99+%D7%97%D7%A9%D7%91%D7%95%D7%9F+%D7%92%D7%9C%D7%92%D7%9C%D7%99+%D7%94%D7%A4%D7%9C%D7%93%D7%94+%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94",
+    description: {
+      he: "צפו בביקורות שלנו ב-Google Maps – פרופיל העסק הרשמי של נמרודי ושות׳ רואי חשבון.",
+      en: "View our Google Maps reviews – the official Google Business Profile of Nimrodi & Co. CPAs.",
+    },
+  },
+  {
     name: "Easy.co.il",
     href: "https://easy.co.il/page/2735913",
     description: {
@@ -114,18 +122,17 @@ export function ExecutiveTestimonials({ lang = "he" }: { lang?: Lang }) {
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{t.reviewsSub}</p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {REVIEW_SOURCES.map((src) => (
             <article
               key={src.href}
               className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:border-gold/60 hover:shadow-lg"
             >
-              <div className="flex items-center gap-2 text-gold" aria-hidden>
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
-                <Star className="h-4 w-4 fill-current" />
+              <div className="flex items-center gap-1.5 text-gold" aria-hidden>
+                <Star className="h-4 w-4" />
+                <span className="text-xs font-semibold uppercase tracking-wider">
+                  {src.name}
+                </span>
               </div>
               <h3 className="mt-4 font-display text-lg font-bold text-primary">{src.name}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
