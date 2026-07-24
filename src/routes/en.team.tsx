@@ -42,7 +42,7 @@ function TeamEn() {
             </div>
             <h1 className="mt-4 font-display text-4xl font-bold text-primary sm:text-5xl">Our partners and senior team</h1>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-              Every engagement is led by a senior partner. Continuity, depth and personal attention — that's the boutique promise.
+              Our professional team provides private clients, corporations, and startups with comprehensive accounting expertise and advanced, high-level tax solutions.
             </p>
           </div>
         </section>
