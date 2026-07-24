@@ -39,7 +39,7 @@ function AboutEn() {
               A boutique CPA firm with big-firm depth
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              Nimrodi & Co. was founded on a simple idea: give clients the depth and rigor of a Big-Four firm — with the accessibility, partner attention and continuity of a boutique. For 25+ years we've been trusted advisors to founders, executives, families and international companies operating in Israel.
+              Nimrodi & Co. was founded on a simple idea: give clients the depth and rigor of a senior professional firm — with the accessibility, partner attention and continuity of a boutique. For 25+ years we've been trusted advisors to founders, executives, families and international companies operating in Israel.
             </p>
           </div>
         </section>
