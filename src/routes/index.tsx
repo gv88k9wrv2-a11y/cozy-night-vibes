@@ -137,7 +137,7 @@ const HIGHLIGHTS = [
   { icon: Award, num: "25+", label: "שנות ניסיון" },
   { icon: Star, num: "5.0", label: "דירוג בגוגל", href: GOOGLE_REVIEWS_URL },
   { icon: Users, num: "80+", label: "המלצות לקוחות", href: GOOGLE_REVIEWS_URL },
-  { icon: Handshake, num: "100%", label: "יחס אישי ושקיפות" },
+  { icon: Handshake, num: "✦", label: "ליווי אישי ומעורבות שותף" },
 ];
 
 function HomePage() {
